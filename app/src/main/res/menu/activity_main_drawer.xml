@@ -3,33 +3,39 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/nav_main"
             android:icon="@drawable/ic_menu_camera"
-            android:title="Import"/>
+            android:title="@string/main"
+            />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_draw_basal"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/draw_basal"
+            />
+        <item
+            android:id="@+id/nav_paint_detail"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery"/>
+            android:title="@string/paint_detail"/>
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_draw_text"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow"/>
+            android:title="@string/draw_text"/>
         <item
-            android:id="@+id/nav_manage"
+            android:id="@+id/nav_canvas_help"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Tools"/>
+            android:title="@string/canvas_help"/>
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="About">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share"/>
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_github_circle_grey600_24dp"
+                android:title="@string/about_title"/>
             <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send"/>
+                android:id="@+id/nav_github"
+                android:icon="@drawable/ic_info_grey600_24dp"
+                android:title="@string/github"/>
         </menu>
     </item>
 

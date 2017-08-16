@@ -39,5 +39,10 @@ dependencies {
     compile "org.jetbrains.anko:anko-design:$ankoVersion"
     compile "org.jetbrains.anko:anko-cardview-v7:$ankoVersion"
     compile "org.jetbrains.anko:anko-recyclerview-v7:$ankoVersion"
+
+    // Using JCenter
+    compile 'eu.davidea:flexible-adapter:5.0.0-rc2'
+    compile 'eu.davidea:flexible-adapter-databinding:1.0.0-b1@aar'
+
     testCompile 'junit:junit:4.12'
 }
