@@ -20,11 +20,12 @@ class MainActivity : AppCompatActivity() {
 
     private var mFragment: Fragment? = null
     lateinit var drawerLayout: DrawerLayout
+    lateinit var toolbar:Toolbar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val toolbar = find<Toolbar>(R.id.toolbar)
+        toolbar = find<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
 
 
@@ -96,10 +97,33 @@ class MainActivity : AppCompatActivity() {
                 ).show(fragmentManager, MessageDialog.TAG)
                 return
             }
-            else ->{
-                mFragment = TabFragment.newInstance(fragmentId)
+            R.id.nav_draw_basal ->{
+                mFragment = TabFragment.newInstance(R.string.draw_basal)
+                toolbar.title = getString(R.string.draw_basal)
                 supportFragmentManager.beginTransaction().replace(R.id.contentFrame, mFragment).commit()
             }
+            R.id.nav_paint_detail ->{
+                toolbar.title = getString(R.string.paint_detail)
+                mFragment = TabFragment.newInstance(R.string.paint_detail)
+                supportFragmentManager.beginTransaction().replace(R.id.contentFrame, mFragment).commit()
+            }
+            R.id.nav_draw_text ->{
+                toolbar.title = getString(R.string.draw_text)
+                mFragment = TabFragment.newInstance(R.string.draw_text)
+                supportFragmentManager.beginTransaction().replace(R.id.contentFrame, mFragment).commit()
+            }
+            R.id.nav_canvas_help ->{
+                toolbar.title = getString(R.string.canvas_help)
+                mFragment = TabFragment.newInstance(R.string.canvas_help)
+                supportFragmentManager.beginTransaction().replace(R.id.contentFrame, mFragment).commit()
+            }
+            R.id.nav_canvas_order ->{
+                toolbar.title = getString(R.string.canvas_order)
+                mFragment = TabFragment.newInstance(R.string.canvas_order)
+                supportFragmentManager.beginTransaction().replace(R.id.contentFrame, mFragment).commit()
+            }
+
+
         }
 
     }

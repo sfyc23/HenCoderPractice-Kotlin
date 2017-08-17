@@ -3,8 +3,10 @@ package com.hencoder.hencoderpracticedraw1.kt
 import com.github.sfyc23.hencoderpractice.R
 import com.github.sfyc23.hencoderpractice.view.canvashelp.view.*
 import com.github.sfyc23.hencoderpractice.view.drawbasal.view.*
+import com.github.sfyc23.hencoderpractice.view.draworder.view.Practice_1_5_01_AfterOnDrawView
 import com.github.sfyc23.hencoderpractice.view.drawtext.view.*
 import com.github.sfyc23.hencoderpractice.view.paintdetail.view.*
+import com.hencoder.hencoderpracticedraw5.practice.*
 
 
 /**
@@ -21,17 +23,20 @@ class DatabaseService {
 
     fun getDataListByStringRes(stringRes: Int): MutableList<PageModel> {
         when (stringRes) {
-            R.id.nav_draw_basal -> {
+            R.string.draw_basal -> {
                 return getDataList1_1()
             }
-            R.id.nav_paint_detail -> {
+            R.string.paint_detail -> {
                 return getDataList1_2()
             }
-            R.id.nav_draw_text -> {
+            R.string.draw_text -> {
                 return getDataList1_3()
             }
-            R.id.nav_canvas_help -> {
+            R.string.canvas_help -> {
                 return getDataList1_4()
+            }
+            R.string.canvas_order -> {
+                return getDataList1_5()
             }
         }
         return mutableListOf()
@@ -127,6 +132,22 @@ class DatabaseService {
             add(PageModel(R.string.title_camera_rotate_hitting_face, Practice_1_4_13_CameraRotateHittingFaceView.TAG))
             add(PageModel(R.string.title_flipboard, Practice_1_4_14_FlipboardView.TAG))
 
+        }
+        return pageModels
+    }
+
+    fun getDataList1_5(): MutableList<PageModel> {
+        var pageModels = ArrayList<PageModel>()
+        pageModels.apply {
+            add(PageModel(R.string.title_after_on_draw, Practice_1_5_01_AfterOnDrawView.TAG))
+            add(PageModel(R.string.title_before_on_draw, Practice_1_5_02_BeforeOnDrawView.TAG))
+            add(PageModel(R.string.title_on_draw_layout, Practice_1_5_03_OnDrawLayout.TAG))
+            add(PageModel(R.string.title_dispatch_draw, Practice_1_5_04_DispatchDrawLayout.TAG))
+            add(PageModel(R.string.title_on_draw_layout, Practice_1_5_05_AfterOnDrawForegroundView.TAG))
+
+            add(PageModel(R.string.title_before_on_draw_foreground, Practice_1_5_06_BeforeOnDrawForegroundView.TAG))
+            add(PageModel(R.string.title_after_draw, Practice_1_5_07_AfterDrawView.TAG))
+            add(PageModel(R.string.title_before_draw, Practice_1_5_08_BeforeDrawView.TAG))
         }
         return pageModels
     }

@@ -3,7 +3,7 @@ apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.0"
+    buildToolsVersion "26.0.1"
     defaultConfig {
         applicationId "com.github.sfyc23.hencoderpractice"
         minSdkVersion 21
@@ -30,7 +30,6 @@ dependencies {
     compile "com.android.support:appcompat-v7:$supportVersion"
     compile "com.android.support:support-v4:$supportVersion"
     compile "com.android.support:design:$supportVersion"
-    compile "com.android.support.constraint:constraint-layout:1.0.2"
 
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     compile "org.jetbrains.anko:anko-sdk25:$ankoVersion"
@@ -40,9 +39,14 @@ dependencies {
     compile "org.jetbrains.anko:anko-cardview-v7:$ankoVersion"
     compile "org.jetbrains.anko:anko-recyclerview-v7:$ankoVersion"
 
+    // Coroutine listeners for Anko Layouts
+    compile "org.jetbrains.anko:anko-sdk25-coroutines:$ankoVersion"
+    compile "org.jetbrains.anko:anko-appcompat-v7-coroutines:$ankoVersion"
+
     // Using JCenter
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'eu.davidea:flexible-adapter:5.0.0-rc2'
     compile 'eu.davidea:flexible-adapter-databinding:1.0.0-b1@aar'
-
+    compile 'com.android.support:support-v4:26.+'
     testCompile 'junit:junit:4.12'
 }

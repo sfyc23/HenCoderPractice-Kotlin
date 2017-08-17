@@ -24,6 +24,11 @@
             android:id="@+id/nav_canvas_help"
             android:icon="@drawable/ic_menu_manage"
             android:title="@string/canvas_help"/>
+        <item
+            android:id="@+id/nav_canvas_order"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/canvas_order"/>
+
     </group>
 
     <item android:title="About">

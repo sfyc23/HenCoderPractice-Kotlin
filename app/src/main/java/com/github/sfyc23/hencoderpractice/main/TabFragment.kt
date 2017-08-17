@@ -2,7 +2,9 @@ package com.github.sfyc23.hencoderpractice.main
 
 import android.content.Context
 import android.graphics.Color
+import android.os.Build
 import android.os.Bundle
+import android.support.annotation.RequiresApi
 import android.support.design.widget.TabLayout
 import android.support.v4.app.Fragment
 import android.support.v4.view.PagerAdapter
@@ -75,6 +77,7 @@ class TabFragment : Fragment() {
 
     class CustomPagerAdapter(private val mContext: Context, val pageModels: MutableList<PageModel>) : PagerAdapter() {
 
+        @RequiresApi(Build.VERSION_CODES.M)
         override fun instantiateItem(collection: ViewGroup, position: Int): Any {
             var viewTag = pageModels.get(position).tag
             var layout = mContext.UI {
