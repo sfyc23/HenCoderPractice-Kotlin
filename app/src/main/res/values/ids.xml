@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <attr name="tabLayout" format="integer" >id</attr>
+    <item name="tab" type="id" />
+    <item name="item_iv_header" type="id" />
+    <item name="item_tv_title" type="id" />
 </resources>

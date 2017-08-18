@@ -46,39 +46,17 @@ class MessageDialog : DialogFragment() {
         }
     }
 
-    /**
-     * <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:scrollbars="vertical"
-    android:scrollbarStyle="outsideInset">
-
-    <TextView
-    android:id="@+id/message"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:paddingTop="24dp"
-    android:layout_marginLeft="24dp"
-    android:layout_marginStart="24dp"
-    android:layout_marginRight="24dp"
-    android:layout_marginEnd="24dp"
-    android:paddingBottom="24dp"
-    tools:text="Message"/>
-
-    </ScrollView>
-     */
-
     @SuppressLint("InflateParams")
     override fun onCreateDialog(savedInstanceState: Bundle?): AlertDialog {
+        var messageView: TextView? = null
         val dialogView = activity.UI {
             scrollView {
                 lparams(matchParent, wrapContent)
                 //outsideInset
                 scrollBarStyle = View.SCROLLBARS_OUTSIDE_INSET
 
-                textView {
-                    id = R.id.message
+                messageView = textView {
+//                    id = R.id.message
                 }.lparams(matchParent, wrapContent){
                     bottomPadding = dip(24)
                     topPadding = dip(24)
@@ -95,9 +73,9 @@ class MessageDialog : DialogFragment() {
 //        val dialogView = LayoutInflater.from(activity)
 //                .inflate(R.layout.dialog_message, null)
 
-        val messageView = dialogView.findViewById<View>(R.id.message) as TextView
-        messageView.movementMethod = LinkMovementMethod.getInstance()
-        messageView.text = Html.fromHtml(arguments.getString(ARG_MESSAGE))
+//        val messageView = dialogView.findViewById<View>(R.id.message) as TextView
+        messageView?.movementMethod = LinkMovementMethod.getInstance()
+        messageView?.text = Html.fromHtml(arguments.getString(ARG_MESSAGE))
 
 
         val builder = AlertDialog.Builder(activity, R.style.AppTheme_AlertDialog)

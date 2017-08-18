@@ -13,14 +13,20 @@ import android.support.v7.widget.Toolbar
 import android.view.Menu
 import android.view.MenuItem
 import com.github.sfyc23.hencoderpractice.R
+import com.github.sfyc23.hencoderpractice.data.eventbus.MessageEvent
 import com.github.sfyc23.hencoderpractice.dialog.MessageDialog
+import org.greenrobot.eventbus.EventBus
+import org.greenrobot.eventbus.Subscribe
+import org.greenrobot.eventbus.ThreadMode
 import org.jetbrains.anko.find
+
 
 class MainActivity : AppCompatActivity() {
 
     private var mFragment: Fragment? = null
     lateinit var drawerLayout: DrawerLayout
     lateinit var toolbar:Toolbar
+    lateinit var navigationView:NavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,12 +41,10 @@ class MainActivity : AppCompatActivity() {
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
-        val navigationView = find<NavigationView>(R.id.nav_view)
-        setupDrawerContent(navigationView)
-//        navigationView.setCheckedItem(R.id.nav_main)
-//        selectFragment(R.id.nav_main)
-        navigationView.setCheckedItem(R.id.nav_draw_basal)
-        selectFragment(R.id.nav_draw_basal)
+        navigationView = find<NavigationView>(R.id.nav_view)
+        setupDrawerContent()
+        navigationView.setCheckedItem(R.id.nav_main)
+        selectFragment(R.id.nav_main)
 
     }
 
@@ -70,7 +74,7 @@ class MainActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
-    private fun setupDrawerContent(navigationView: NavigationView) {
+    private fun setupDrawerContent() {
         navigationView.setNavigationItemSelectedListener {
             drawerLayout.closeDrawers()
             selectFragment(it.itemId)
@@ -78,7 +82,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    var tabFragment: TabFragment? = null
+
 
     private fun selectFragment(fragmentId: Int) {
         when (fragmentId) {
@@ -96,6 +100,11 @@ class MainActivity : AppCompatActivity() {
                         null
                 ).show(fragmentManager, MessageDialog.TAG)
                 return
+            }
+            R.id.nav_main->{
+                toolbar.title = getString(R.string.app_name)
+                mFragment = MainFragment.newInstance()
+                supportFragmentManager.beginTransaction().replace(R.id.contentFrame, mFragment).commit()
             }
             R.id.nav_draw_basal ->{
                 mFragment = TabFragment.newInstance(R.string.draw_basal)
@@ -126,6 +135,26 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    fun onMessageEvent(event: MessageEvent) {
+        var mainPage = event.mainPage
+//        toast(event.message)
+        navigationView.setCheckedItem(R.id.nav_main)
+        selectFragment(mainPage.navRes)
+
+    }
+
+
+    override fun onStart() {
+        super.onStart()
+        EventBus.getDefault().register(this);
+    }
+
+    override fun onStop() {
+        super.onStop()
+        EventBus.getDefault().unregister(this);
     }
 
 }

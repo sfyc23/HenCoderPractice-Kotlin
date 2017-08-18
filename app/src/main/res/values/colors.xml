@@ -9,4 +9,5 @@
     <color name="colorPrimary_light">#673ab7</color><!-- Deep Purple 500 -->
     <color name="colorPrimaryDark_light">#512da8</color><!-- Deep Purple 700 -->
 
+    <color name="transparent">#00000000</color><!-- 透明色 -->
 </resources>

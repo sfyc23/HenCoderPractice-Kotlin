@@ -21,6 +21,17 @@ class DatabaseService {
         val instance = DatabaseService()
     }
 
+    fun getMainPageList(): ArrayList<MainPage> {
+        var mainPages = ArrayList<MainPage>()
+        return mainPages.apply {
+            add(MainPage(R.drawable.ic_launcher, R.string.draw_basal, R.id.nav_draw_basal))
+            add(MainPage(R.drawable.ic_launcher, R.string.paint_detail, R.id.nav_paint_detail))
+            add(MainPage(R.drawable.ic_launcher, R.string.draw_text, R.id.nav_draw_text))
+            add(MainPage(R.drawable.ic_launcher, R.string.canvas_help, R.id.nav_canvas_help))
+            add(MainPage(R.drawable.ic_launcher, R.string.canvas_order, R.id.nav_canvas_order))
+        }
+    }
+
     fun getDataListByStringRes(stringRes: Int): MutableList<PageModel> {
         when (stringRes) {
             R.string.draw_basal -> {
@@ -157,4 +168,14 @@ class DatabaseService {
 class PageModel(
         var titleRes: Int,
         var tag: String
+)
+
+
+/**
+ * 用于主页 list 的跳转
+ */
+data class MainPage(
+        var imageRes: Int,
+        var titleRes: Int,
+        var navRes: Int
 )

@@ -1,6 +1,8 @@
 package com.github.sfyc23.hencoderpractice.main
 
+import android.os.Build
 import android.os.Bundle
+import android.support.annotation.RequiresApi
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -38,6 +40,7 @@ class NewPageFragment : Fragment() {
 
     }
 
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 //        val view = inflater?.inflate(practiceLayoutRes, container, false)
 //        return view

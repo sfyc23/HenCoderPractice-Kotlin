@@ -27,4 +27,13 @@
         <item name="colorPrimary">@color/colorPrimary_light</item>
     </style>
 
+    <style name="selectableItemBackground">
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <!--<item name="android:background">@drawable/select_table_item_background</item>- -->
+    </style>
+    <style name="selectableItemBackgroundBorderless">
+        <item name="android:background">?android:selectableItemBackgroundBorderless</item>
+        <item name="android:elevation">2dp</item>
+    </style>
+
 </resources>
