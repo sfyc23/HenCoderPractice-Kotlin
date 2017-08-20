@@ -10,11 +10,11 @@ class Practice_1_4_11_CameraRotateView : View {
     companion object Factory {
         val TAG = Practice_1_4_11_CameraRotateView::class.java.simpleName
     }
-    internal var paint = Paint(Paint.ANTI_ALIAS_FLAG)
-    internal var bitmap: Bitmap
-    internal var camera = Camera()
-    internal var point1 = Point(200, 200)
-    internal var point2 = Point(600, 200)
+    var paint = Paint(Paint.ANTI_ALIAS_FLAG)
+    var bitmap: Bitmap
+    var camera = Camera()
+    var point1 = Point(200, 200)
+    var point2 = Point(600, 200)
 
     constructor(context: Context) : super(context) {}
 

@@ -24,6 +24,7 @@ class Practice_1_4_05_RotateView : View {
 
     init {
         bitmap = BitmapFactory.decodeResource(resources, R.drawable.maps)
+        bitmap = Bitmap.createScaledBitmap(bitmap, (bitmap.width * 0.7).toInt(), (bitmap.width * 0.7).toInt(), true)
 
         textPaint.color = Color.RED
         textPaint.textSize = sp(16f).toFloat()
@@ -57,7 +58,7 @@ class Practice_1_4_05_RotateView : View {
         canvas.save()
         canvas.translate(width * 5 / 6f, height / 2f)
         canvas.save()
-        canvas.rotate(180f, 100f, 100f)
+        canvas.rotate(180f, 0f, -100f)
         canvas.drawBitmap(bitmap, -bitmap.width / 2f, -bitmap.height / 2f, paint)
         canvas.restore()
         canvas.drawText("180度(偏)", 0f, bitmap.height / 2 + 100f, textPaint)

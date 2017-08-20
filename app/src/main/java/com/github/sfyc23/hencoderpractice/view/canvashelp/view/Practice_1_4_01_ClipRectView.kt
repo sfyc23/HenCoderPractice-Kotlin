@@ -39,11 +39,11 @@ class Practice_1_4_01_ClipRectView : View {
 
         //画一个中心坐标线
         canvas.drawLine(width / 2f, 0f, width / 2f, height.toFloat(), textPaint)
-        canvas.drawLine(0f, height/2f, width.toFloat(), height/2f, textPaint)
+        canvas.drawLine(0f, height * 0.382f, width.toFloat(), height * 0.382f, textPaint)
 
         //原图
         canvas.save()//保存 canvas 的状态
-        canvas.translate(width / 4f, height / 2f)//将坐标移动到中心位置
+        canvas.translate(width / 4f, height * 0.382f)//将坐标移动到中心位置
         canvas.drawBitmap(bitmap, -bitmap.width / 2f, -bitmap.height / 2f, paint)//将图标刚好绘制到中心位置
         canvas.drawText("原内容", 0f, bitmap.height / 2f + 100f, textPaint)//一些描述文字
         canvas.restore()//恢复 canvas 的状态
@@ -51,7 +51,7 @@ class Practice_1_4_01_ClipRectView : View {
 
         //裁剪后
         canvas.save()
-        canvas.translate(width * 3 / 4f, height / 2f)
+        canvas.translate(width * 3 / 4f, height * 0.382f)
 
         canvas.save()
         canvas.clipRect(-bitmap.width / 2f, -100f, 300f, bitmap.width / 2f);

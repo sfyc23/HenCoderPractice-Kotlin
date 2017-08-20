@@ -4,7 +4,7 @@ import android.app.Activity
 import android.os.Build
 import android.os.Bundle
 import android.support.annotation.RequiresApi
-import com.github.sfyc23.hencoderpractice.view.paintdetail.view.Practice_1_2_14_MaskFilterView
+import com.github.sfyc23.hencoderpractice.view.canvashelp.view.Practice_1_4_14_FlipboardView
 import com.hencoder.hencoderpracticedraw1.kt.practice1View
 import org.jetbrains.anko.UI
 
@@ -14,7 +14,7 @@ class CustomActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         var layout = UI {
-            practice1View(Practice_1_2_14_MaskFilterView.TAG)
+            practice1View(Practice_1_4_14_FlipboardView.TAG)
 /*            scrollView() {
 //                lparams(matchParent, wrapContent)
                 verticalLayout() {

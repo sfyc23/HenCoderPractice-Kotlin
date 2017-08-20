@@ -11,9 +11,10 @@ class Practice_1_4_09_MatrixRotateView : View {
     companion object Factory {
         val TAG = Practice_1_4_09_MatrixRotateView::class.java.simpleName
     }
-    internal var paint = Paint(Paint.ANTI_ALIAS_FLAG)
-    internal var bitmap: Bitmap
-    internal var textPaint = Paint()
+    var paint = Paint(Paint.ANTI_ALIAS_FLAG)
+    var bitmap: Bitmap
+    var textPaint = Paint()
+    var myMatrix = Matrix()
 
     constructor(context: Context) : super(context) {}
 
@@ -33,26 +34,27 @@ class Practice_1_4_09_MatrixRotateView : View {
 
         //先移动坐标
         canvas.save()
-        matrix.reset()
-//        matrix.postTranslate(width / 4f, height / 2f)
-        matrix.postRotate(45f)
-        canvas.concat(matrix)
-//        canvas.drawBitmap(bitmap, -bitmap.width / 2f, -bitmap.height / 2f, paint)
-        canvas.drawBitmap(bitmap, 0f, 0f, paint)
+        myMatrix.reset()
+        myMatrix.postTranslate(width / 4f, height * 0.382f)
+        myMatrix.postRotate(45f, width / 4f, height * 0.382f)
+        canvas.concat(myMatrix)
+        canvas.drawBitmap(bitmap, -bitmap.width / 2f, -bitmap.height / 2f, paint)
         canvas.drawText("45度", 0f, bitmap.height / 2 + 100f, textPaint)
         canvas.restore()
 
 
-   /*     canvas.save()
-        matrix.reset()
-        matrix.postTranslate(width * 3 / 4f, height / 2f)
-//        matrix.postRotate(180f)
-        canvas.concat(matrix)
+
+        canvas.save()
+        myMatrix.reset()
+        myMatrix.postTranslate(width * 3 / 4f, height * 0.382f)
+        myMatrix.postRotate(180f, width * 3 / 4f, height * 0.382f)
+        canvas.concat(myMatrix)
         canvas.drawBitmap(bitmap, -bitmap.width / 2f, -bitmap.height / 2f, paint)
         canvas.drawText("180度", 0f, bitmap.height / 2 + 100f, textPaint)
-        canvas.restore()*/
+        canvas.restore()
 
 
+        
 
     }
 }
