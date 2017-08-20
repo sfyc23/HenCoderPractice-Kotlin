@@ -11,9 +11,9 @@ class Practice_1_4_04_ScaleView : View {
     companion object Factory {
         val TAG = Practice_1_4_04_ScaleView::class.java.simpleName
     }
+
     internal var paint = Paint(Paint.ANTI_ALIAS_FLAG)
     internal var bitmap: Bitmap
-
     internal var textPaint = Paint()
 
     constructor(context: Context) : super(context) {}

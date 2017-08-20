@@ -62,7 +62,7 @@ fun ViewManager.practice1View(tag: String, theme: Int = 0): View {
         Practice_1_2_12_PathEffectView.TAG -> return practice_1_2_12_PathEffectView(theme) {}
         Practice_1_2_13_ShadowLayerView.TAG -> return practice_1_2_13_ShadowLayerView(theme) {}
         Practice_1_2_14_MaskFilterView.TAG -> {
-            return practice_1_2_14_MaskFilterView(theme) {}
+            return  practice_1_2_14_MaskFilterView(theme){}
         }
         Practice_1_2_15_FillPathView.TAG -> return practice_1_2_15_FillPathView(theme) {}
         Practice_1_2_16_TextPathView.TAG -> return practice_1_2_16_TextPathView(theme) {}

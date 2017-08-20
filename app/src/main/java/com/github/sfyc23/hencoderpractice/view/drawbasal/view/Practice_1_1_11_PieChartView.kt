@@ -31,9 +31,9 @@ class Practice_1_1_11_PieChartView : View {
         //        练习内容：使用各种 Canvas.drawXXX() 方法画饼图
         val paint6 = Paint(Paint.ANTI_ALIAS_FLAG)
 
-        val centerX = 650
-        val centerY = 400
-        val radius = 350
+        val centerX = width / 2f
+        val centerY = height * 0.382f
+        val radius = 350f
 
 
         val paintTest = Paint()
@@ -65,15 +65,11 @@ class Practice_1_1_11_PieChartView : View {
             val d2 = -currentAngle * 3.14 / 180
             Log.e("TAG,", (Math.cos(d1) == Math.cos(d2)).toString() + "")
 
-            val x1 = (centerX + radius * Math.cos(angleMath)).toInt()
-            val y1 = (centerY + radius * Math.sin(angleMath)).toInt()
-            canvas.drawCircle(x1.toFloat(), y1.toFloat(), 10f, paintTest)
+//            val x1 = (centerX + radius * Math.cos(angleMath)).toInt()
+//            val y1 = (centerY + radius * Math.sin(angleMath)).toInt()
+//            canvas.drawCircle(x1.toFloat(), y1.toFloat(), 10f, paintTest)
         }
 
-
-        //        canvas.drawCircle(1000, 1000, 10, paintTest);
-        ////        1   =   x0   +   r   *   cos(ao   *   3.14   /180   )
-        ////        y1   =   y0   +   r   *   sin(ao   *   3.14   /180   )
 
     }
 

@@ -137,13 +137,12 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    //———————————————————eventbus 相关————————————————————————————
     @Subscribe(threadMode = ThreadMode.MAIN)
     fun onMessageEvent(event: MessageEvent) {
         var mainPage = event.mainPage
-//        toast(event.message)
-        navigationView.setCheckedItem(R.id.nav_main)
+        navigationView.setCheckedItem(mainPage.navRes)
         selectFragment(mainPage.navRes)
-
     }
 
 

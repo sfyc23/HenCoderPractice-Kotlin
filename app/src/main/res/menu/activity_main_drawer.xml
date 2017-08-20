@@ -4,29 +4,29 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_main"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_launcher"
             android:title="@string/main"
             />
         <item
             android:id="@+id/nav_draw_basal"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_1_1"
             android:title="@string/draw_basal"
             />
         <item
             android:id="@+id/nav_paint_detail"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_1_2"
             android:title="@string/paint_detail"/>
         <item
             android:id="@+id/nav_draw_text"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_1_3"
             android:title="@string/draw_text"/>
         <item
             android:id="@+id/nav_canvas_help"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_1_4"
             android:title="@string/canvas_help"/>
         <item
             android:id="@+id/nav_canvas_order"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_1_5"
             android:title="@string/canvas_order"/>
 
     </group>

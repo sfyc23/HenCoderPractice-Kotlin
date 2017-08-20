@@ -31,18 +31,23 @@ class Practice_1_3_10_SetTextAlignView : View {
         // 使用 Paint.setTextAlign() 来调整文字对齐方式
 
         // 第一处：使用 Paint.Align.LEFT
+
+        canvas.drawText("Hello HenCoder(Nothing)", width / 2f, 100f, paint)
+
         paint.textAlign = Paint.Align.LEFT
-        canvas.drawText("Hello HenCoder(LEFT)", (width / 2).toFloat(), 100f, paint)
+        canvas.drawText("Hello HenCoder(LEFT)", width / 2f, 240f, paint)
 
         // 第二处：使用 Paint.Align.CENTER
         paint.textAlign = Paint.Align.CENTER
-        canvas.drawText("Hello HenCoder(CENTER)", (width / 2).toFloat(), 200f, paint)
+        canvas.drawText("Hello HenCoder(CENTER)", width / 2f, 360f, paint)
 
         // 第三处：使用 Paint.Align.RIGHT
         paint.textAlign = Paint.Align.RIGHT
-        canvas.drawText("Hello HenCoder(RIGHT)", (width / 2).toFloat(), 300f, paint)
+        canvas.drawText("Hello HenCoder(RIGHT)", width / 2f, 500f, paint)
 
 
-        canvas.drawLine((width / 2).toFloat(), 0f, (width / 2).toFloat(), 360f, paint)
+
+
+        canvas.drawLine(width / 2f, 0f, width / 2f, 360f, paint)
     }
 }

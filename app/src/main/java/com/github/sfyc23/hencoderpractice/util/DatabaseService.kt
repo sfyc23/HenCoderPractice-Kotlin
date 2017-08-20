@@ -24,11 +24,11 @@ class DatabaseService {
     fun getMainPageList(): ArrayList<MainPage> {
         var mainPages = ArrayList<MainPage>()
         return mainPages.apply {
-            add(MainPage(R.drawable.ic_launcher, R.string.draw_basal, R.id.nav_draw_basal))
-            add(MainPage(R.drawable.ic_launcher, R.string.paint_detail, R.id.nav_paint_detail))
-            add(MainPage(R.drawable.ic_launcher, R.string.draw_text, R.id.nav_draw_text))
-            add(MainPage(R.drawable.ic_launcher, R.string.canvas_help, R.id.nav_canvas_help))
-            add(MainPage(R.drawable.ic_launcher, R.string.canvas_order, R.id.nav_canvas_order))
+            add(MainPage(R.drawable.ic_1_1, R.string.draw_basal, R.id.nav_draw_basal))
+            add(MainPage(R.drawable.ic_1_2, R.string.paint_detail, R.id.nav_paint_detail))
+            add(MainPage(R.drawable.ic_1_3, R.string.draw_text, R.id.nav_draw_text))
+            add(MainPage(R.drawable.ic_1_4, R.string.canvas_help, R.id.nav_canvas_help))
+            add(MainPage(R.drawable.ic_1_5, R.string.canvas_order, R.id.nav_canvas_order))
         }
     }
 

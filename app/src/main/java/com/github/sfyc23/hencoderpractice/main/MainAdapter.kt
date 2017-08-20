@@ -66,7 +66,7 @@ class MainAdapter(val context: Context, val items: ArrayList<MainPage>?) : Recyc
                 imageView {
                     id = R.id.item_iv_header
                     leftPadding = dip(16)
-                    scaleType = ImageView.ScaleType.CENTER_CROP
+                    scaleType = ImageView.ScaleType.CENTER_INSIDE
                     imageResource = R.drawable.ic_menu_camera
                 }.lparams(width = dip(40), height = dip(40))
                 textView {

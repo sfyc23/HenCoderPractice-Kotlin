@@ -45,7 +45,7 @@ class Practice_1_3_02_StaticLayoutView : View {
                 Layout.Alignment.ALIGN_NORMAL, 1f, 0f, true)
 
         canvas.save();
-        canvas.translate(10f, 200f);
+        canvas.translate(50f, 200f);
         staticLayout1.draw(canvas);
         canvas.translate(0f, 300f);
         staticLayout2.draw(canvas);

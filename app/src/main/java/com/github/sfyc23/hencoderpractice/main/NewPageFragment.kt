@@ -21,18 +21,9 @@ class NewPageFragment : Fragment() {
                 putString(BUNDLE_KEY_TAG, practiceViewTag)
             }
         }
-        /* fun newInstance(practiceViewTag: String): NewPageFragment {
-
-             val fragment = NewPageFragment()
-             val args = Bundle()
-             args.putString(BUNDLE_KEY_TAG, practiceViewTag)
-             fragment.arguments = args
-             return fragment
-         }*/
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
         savedInstanceState?.let {
             viewTag = arguments.getString(BUNDLE_KEY_TAG)
         }
@@ -42,9 +33,6 @@ class NewPageFragment : Fragment() {
 
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-//        val view = inflater?.inflate(practiceLayoutRes, container, false)
-//        return view
-//        return inflater?.inflate(practiceLayoutRes, container, false)
 
         var view = UI {
             practice1View(viewTag).apply {
@@ -54,16 +42,6 @@ class NewPageFragment : Fragment() {
         return view
     }
 
-
-//    private class Component() : AnkoComponent<ViewGroup> {
-//
-//        lateinit var recycler: RecyclerView
-//
-//        override fun createView(ui: AnkoContext<ViewGroup>) = with(ui) {
-//            recycler = autoFitRecycler().apply(AutofitRecyclerView::style)
-//            recycler
-//        }
-//    }
 
 }
 

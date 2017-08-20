@@ -32,11 +32,14 @@ class Practice_1_2_14_MaskFilterView : View {
     init {
         setLayerType(View.LAYER_TYPE_SOFTWARE, null)
         bitmap = BitmapFactory.decodeResource(resources, R.drawable.what_the_fuck)
+        //将 bitmap 缩小一半
+        bitmap = Bitmap.createScaledBitmap(bitmap, bitmap.width / 2, bitmap.height / 2, true)
+
         bitmapHeight = bitmap.height
         bitmapWidth = bitmap.width
 
         textPaint.color = Color.RED
-        textPaint.textSize = sp(12f).toFloat()
+        textPaint.textSize = sp(16f).toFloat()
     }
 
     override fun onDraw(canvas: Canvas) {

@@ -13,6 +13,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import com.github.sfyc23.hencoderpractice.R
 import com.hencoder.hencoderpracticedraw1.kt.DatabaseService
 import com.hencoder.hencoderpracticedraw1.kt.PageModel
 import com.hencoder.hencoderpracticedraw1.kt.practice1View
@@ -53,11 +54,12 @@ class TabFragment : Fragment() {
                 orientation = LinearLayout.VERTICAL
                 lparams(width = matchParent, height = matchParent)
                 backgroundColor = Color.parseColor("#33000000")
-                tabLayout = themedTabLayout() {
+
+                tabLayout = themedTabLayout(R.style.HenCoderTabTextAppearance) {
                     //                    id = R.id.tabLayout
                     lparams(width = matchParent, height = dip(48))
                     tabMode = TabLayout.MODE_SCROLLABLE
-                    backgroundColor = Color.WHITE
+//                    backgroundColor = Color.WHITE
                 }
 
                 pager = viewPager {

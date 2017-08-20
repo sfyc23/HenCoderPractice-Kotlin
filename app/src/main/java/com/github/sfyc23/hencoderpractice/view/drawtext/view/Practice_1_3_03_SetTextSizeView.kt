@@ -24,28 +24,28 @@ class Practice_1_3_03_SetTextSizeView : View {
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
 
-        var y = 100
+        var y = 100f
 
         // 使用 paint.setTextSize() 来设置不同大小的文字
 
         // 第一处：文字大小 16
 
         paint.textSize = sp(8f).toFloat()
-        canvas.drawText(text, 50f, y.toFloat(), paint)
+        canvas.drawText(text, 50f, y, paint)
 
         y += 55
         // 第一处：文字大小 24
         paint.textSize = sp(10f).toFloat()
-        canvas.drawText(text, 50f, y.toFloat(), paint)
+        canvas.drawText(text, 50f, y, paint)
 
         y += 65
         // 第一处：文字大小 48
         paint.textSize = sp(12f).toFloat()
-        canvas.drawText(text, 50f, y.toFloat(), paint)
+        canvas.drawText(text, 50f, y, paint)
 
         y += 80
         // 第一处：文字大小 72
         paint.textSize = sp(16f).toFloat()
-        canvas.drawText(text, 50f, y.toFloat(), paint)
+        canvas.drawText(text, 50f, y, paint)
     }
 }
