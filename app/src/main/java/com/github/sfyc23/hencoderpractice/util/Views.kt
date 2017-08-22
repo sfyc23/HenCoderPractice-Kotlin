@@ -204,8 +204,9 @@ fun ViewManager.practice1View(tag: String, theme: Int = 0): View {
 
 }
 
-inline fun ViewManager.practiceDefaultView(theme: Int = 0, init: PracticeDefaultView.() -> Unit)
-        = ankoView(::PracticeDefaultView, theme, init)
+inline fun ViewManager.practiceDefaultView(theme: Int = 0, init: PracticeDefaultView.() -> Unit): PracticeDefaultView {
+    return ankoView({ PracticeDefaultView(it) }, theme, init)
+}
 
 
 //--------------------------------start 1.1 绘制基础 start------------------------------------
