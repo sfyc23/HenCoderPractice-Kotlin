@@ -14,6 +14,8 @@
 2. 使用 Anko Layouts 代替 XML 做布局。大大减小 xml 文件的数量；
 3. 将数据放在一起，一家人在一起，就是要整整齐齐。
 
+[体验 demo ](https://fir.im/ven7)
+
 ## License
 
     BSD 2-Clause License
