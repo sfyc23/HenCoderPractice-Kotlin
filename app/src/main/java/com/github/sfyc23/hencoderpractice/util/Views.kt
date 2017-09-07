@@ -4,6 +4,7 @@ import android.content.res.ColorStateList
 import android.graphics.Color
 import android.os.Build
 import android.support.annotation.RequiresApi
+import android.support.v4.content.ContextCompat
 import android.view.Gravity
 import android.view.View
 import android.view.ViewManager
@@ -18,6 +19,7 @@ import com.github.sfyc23.hencoderpractice.view.drawtext.view.*
 import com.github.sfyc23.hencoderpractice.view.paintdetail.view.*
 import com.github.sfyc23.hencoderpractice.view.paintdetail.view.Practice_1_2_03_SweepGradientView
 import com.github.sfyc23.hencoderpractice.view.paintdetail.view.Practice_1_2_04_BitmapShaderView
+import com.github.sfyc23.hencoderpractice.view.practice_1_6.view.*
 import com.hencoder.hencoderpracticedraw5.practice.*
 import org.jetbrains.anko.*
 import org.jetbrains.anko.custom.ankoView
@@ -198,6 +200,271 @@ fun ViewManager.practice1View(tag: String, theme: Int = 0): View {
                 }.lparams(matchParent, wrapContent)
             }
         }
+
+        Practice_1_6_01_Translation.TAG -> {
+            return relativeLayout {
+                practice_1_6_01_Translation(theme) {
+                    lparams(matchParent, matchParent)
+                    imageView{
+                        id = R.id.imageView
+                        imageResource = R.drawable.music
+
+                    }.lparams(){
+                        marginStart = dip(48)
+                        topMargin = dip(36)
+                    }
+                    textView {
+                        id = R.id.noteTv
+                        textSizeDimen = R.dimen.text_size
+                        text = "OnClick Button Start"
+                        textColor = ContextCompat.getColor(context, R.color.colorAccent)
+                    }.lparams(){
+                        centerInParent()
+                    }
+                    button{
+                        id = R.id.animateBt
+                        text = "animate"
+                    }.lparams(dip(120),dip(64)){
+                        margin = dip(32)
+                        alignParentBottom()
+                        alignParentEnd()
+                    }
+                }
+
+            }
+        }
+        Practice_1_6_02_Rotation.TAG -> {
+            return relativeLayout {
+                practice_1_6_02_Rotation(theme) {
+                    lparams(matchParent, matchParent)
+                    imageView{
+                        id = R.id.imageView
+                        imageResource = R.drawable.music
+                    }.lparams(){
+                        marginStart = dip(48)
+                        topMargin = dip(36)
+                    }
+                    textView {
+                        id = R.id.noteTv
+                        textSizeDimen = R.dimen.text_size
+                        text = "OnClick Button Start"
+                        textColor = ContextCompat.getColor(context, R.color.colorAccent)
+                    }.lparams(){
+                        centerInParent()
+                    }
+                    button{
+                        id = R.id.animateBt
+                        text = "animate"
+                    }.lparams(dip(120),dip(64)){
+                        margin = dip(32)
+                        alignParentBottom()
+                        alignParentEnd()
+                    }
+                }
+
+            }
+        }
+        Practice_1_6_03_Scale.TAG -> {
+            return relativeLayout {
+                practice_1_6_03_Scale(theme) {
+                    lparams(matchParent, matchParent)
+                    imageView{
+                        id = R.id.imageView
+                        imageResource = R.drawable.music
+                    }.lparams(){
+                        marginStart = dip(48)
+                        topMargin = dip(36)
+                    }
+                    textView {
+                        id = R.id.noteTv
+                        textSizeDimen = R.dimen.text_size
+                        text = "OnClick Button Start"
+                        textColor = ContextCompat.getColor(context, R.color.colorAccent)
+                    }.lparams(){
+                        centerInParent()
+                    }
+                    button{
+                        id = R.id.animateBt
+                        text = "animate"
+                    }.lparams(dip(120),dip(64)){
+                        margin = dip(32)
+                        alignParentBottom()
+                        alignParentEnd()
+                    }
+                }
+
+            }
+        }
+        Practice_1_6_04_Alpha.TAG -> {
+            return relativeLayout {
+                practice_1_6_04_Alpha(theme) {
+                    lparams(matchParent, matchParent)
+                    imageView{
+                        id = R.id.imageView
+                        imageResource = R.drawable.music
+                    }.lparams(){
+                        marginStart = dip(48)
+                        topMargin = dip(36)
+
+                    }
+                    textView {
+                        id = R.id.noteTv
+                        textSizeDimen = R.dimen.text_size
+                        text = "OnClick Button Start"
+                        textColor = ContextCompat.getColor(context, R.color.colorAccent)
+                    }.lparams(){
+                        centerInParent()
+                    }
+                    button{
+                        id = R.id.animateBt
+                        text = "animate"
+                    }.lparams(dip(120),dip(64)){
+                        margin = dip(32)
+                        alignParentBottom()
+                        alignParentEnd()
+                    }
+                }
+
+            }
+        }
+
+        Practice_1_6_05_MultiProperties.TAG -> {
+            return relativeLayout {
+                practice_1_6_05_MultiProperties(theme) {
+                    lparams(matchParent, matchParent)
+                    imageView{
+                        id = R.id.imageView
+                        imageResource = R.drawable.music
+                    }.lparams(){
+                        marginStart = dip(48)
+                        topMargin = dip(80)
+                    }
+                    textView {
+                        id = R.id.noteTv
+                        textSizeDimen = R.dimen.text_size
+                        textColor = ContextCompat.getColor(context, R.color.colorAccent)
+                    }.lparams(){
+                        centerInParent()
+                    }
+                    button{
+                        id = R.id.animateBt
+                        text = "animate"
+                    }.lparams(dip(120),dip(64)){
+                        margin = dip(32)
+                        alignParentBottom()
+                        alignParentEnd()
+                    }
+                }
+
+            }
+        }
+        Practice_1_6_06_Duration.TAG -> {
+            return linearLayout {
+              practice_1_6_06_Duration {
+                  lparams(matchParent, matchParent)
+                  orientation = LinearLayout.VERTICAL
+                  linearLayout{
+                      orientation = LinearLayout.HORIZONTAL
+                      backgroundResource = R.color.material_text_color_white_text
+                      lparams(matchParent,dip(48))
+//                      weightSum = 7f
+                      textView{
+                          id = R.id.durationLabelTv
+                          setPadding(dip(16), dip(8), dip(16), dip(8))
+                          text = "duration"
+                          textSizeDimen = R.dimen.text_size_label
+//                          lparams(0,wrapContent,1f)
+//                          weightSum = 1f
+                          gravity = Gravity.CENTER
+                      }.lparams(0, matchParent,2f){
+                      }
+                      seekBar {
+                          id = R.id.durationSb
+                      }.lparams(0, matchParent,5f){
+                          topMargin = dip(8)
+                      }
+                      textView{
+                          id = R.id.durationValueTv
+                          setPadding(dip(16), dip(8), dip(16), dip(8))
+                          text = "duration"
+                          textSizeDimen = R.dimen.text_size_label
+                          gravity = Gravity.CENTER
+                      }.lparams(0, matchParent,2f)
+                  }
+                  relativeLayout{
+                      lparams(matchParent, matchParent)
+                      imageView{
+                          id = R.id.imageView
+                          imageResource = R.drawable.music
+                      }.lparams(){
+                          marginStart = dip(48)
+                          topMargin = dip(80)
+                      }
+                      button{
+                          id = R.id.animateBt
+                          text = "animate"
+                      }.lparams(dip(120),dip(64)){
+                          margin = dip(32)
+                          alignParentBottom()
+                          alignParentEnd()
+                      }
+                  }
+              }
+            }
+        }
+        Practice_1_6_07_Interpolator.TAG -> {
+            return linearLayout {
+                practice_1_6_07_Interpolator {
+                    orientation = LinearLayout.VERTICAL
+                    themedSpinner(R.style.hello) {
+                        id = R.id.interpolatorSpinner
+                        setPadding(dip(16),dip(8),dip(16),dip(8))
+                    }
+                    relativeLayout {
+                        lparams(matchParent, matchParent)
+                        imageView{
+                            id = R.id.imageView
+                            imageResource = R.drawable.music
+                        }.lparams(){
+                            marginStart = dip(48)
+                            topMargin = dip(80)
+                        }
+                        button{
+                            id = R.id.animateBt
+                            text = "animate"
+                        }.lparams(dip(120),dip(64)){
+                            margin = dip(32)
+                            alignParentBottom()
+                            alignParentEnd()
+                        }
+                    }
+                }
+            }
+        }
+        Practice_1_6_08_ObjectAnimatorLayout.TAG -> {
+            return relativeLayout {
+                practice_1_6_08_ObjectAnimatorLayout{
+                    lparams(matchParent, matchParent)
+                    practice_1_6_08_ObjectAnimatorView {
+                        id = R.id.objectAnimatorView
+
+                    }.lparams(dip(200),dip(200)){
+                        centerInParent()
+                    }
+                    button{
+                        id = R.id.animateBt
+                        text = "animate"
+                    }.lparams(dip(120),dip(64)){
+                        margin = dip(32)
+                        alignParentBottom()
+                        alignParentEnd()
+                    }
+                }
+
+            }
+        }
+
+
 
         else -> return practiceDefaultView(theme) {}
     }
@@ -424,3 +691,41 @@ inline fun ViewManager.practice_1_5_07_AfterDrawView(theme: Int = 0, init: Pract
 inline fun ViewManager.practice_1_5_08_BeforeDrawView(theme: Int = 0, init: Practice_1_5_08_BeforeDrawView.() -> Unit): Practice_1_5_08_BeforeDrawView {
     return ankoView({ Practice_1_5_08_BeforeDrawView(it) }, theme, init)
 }
+//--------------------------------end 1.5 绘制顺序 end------------------------------------
+
+
+
+//--------------------------------start 1.6 属性动画（上手篇） start------------------------------------
+inline fun ViewManager.practice_1_6_01_Translation(theme: Int = 0, init: Practice_1_6_01_Translation.() -> Unit): Practice_1_6_01_Translation {
+    return ankoView({ Practice_1_6_01_Translation(it) }, theme, init)
+}
+
+inline fun ViewManager.practice_1_6_02_Rotation(theme: Int = 0, init: Practice_1_6_02_Rotation.() -> Unit): Practice_1_6_02_Rotation {
+    return ankoView({ Practice_1_6_02_Rotation(it) }, theme, init)
+}
+
+inline fun ViewManager.practice_1_6_03_Scale(theme: Int = 0, init: Practice_1_6_03_Scale.() -> Unit): Practice_1_6_03_Scale {
+    return ankoView({ Practice_1_6_03_Scale(it) }, theme, init)
+}
+
+inline fun ViewManager.practice_1_6_04_Alpha(theme: Int = 0, init: Practice_1_6_04_Alpha.() -> Unit): Practice_1_6_04_Alpha {
+    return ankoView({ Practice_1_6_04_Alpha(it) }, theme, init)
+}
+
+inline fun ViewManager.practice_1_6_05_MultiProperties(theme: Int = 0, init: Practice_1_6_05_MultiProperties.() -> Unit): Practice_1_6_05_MultiProperties {
+    return ankoView({ Practice_1_6_05_MultiProperties(it) }, theme, init)
+}
+
+inline fun ViewManager.practice_1_6_06_Duration(theme: Int = 0, init: Practice_1_6_06_Duration.() -> Unit): Practice_1_6_06_Duration {
+    return ankoView({ Practice_1_6_06_Duration(it) }, theme, init)
+}
+inline fun ViewManager.practice_1_6_07_Interpolator(theme: Int = 0, init: Practice_1_6_07_Interpolator.() -> Unit): Practice_1_6_07_Interpolator {
+    return ankoView({ Practice_1_6_07_Interpolator(it) }, theme, init)
+}
+inline fun ViewManager.practice_1_6_08_ObjectAnimatorView(theme: Int = 0, init: Practice_1_6_08_ObjectAnimatorView.() -> Unit): Practice_1_6_08_ObjectAnimatorView {
+    return ankoView({ Practice_1_6_08_ObjectAnimatorView(it) }, theme, init)
+}
+inline fun ViewManager.practice_1_6_08_ObjectAnimatorLayout(theme: Int = 0, init: Practice_1_6_08_ObjectAnimatorLayout.() -> Unit): Practice_1_6_08_ObjectAnimatorLayout {
+    return ankoView({ Practice_1_6_08_ObjectAnimatorLayout(it) }, theme, init)
+}
+//--------------------------------end 1.6 属性动画（上手篇） end------------------------------------

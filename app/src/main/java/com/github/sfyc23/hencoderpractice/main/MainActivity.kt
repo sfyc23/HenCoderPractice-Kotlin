@@ -25,8 +25,8 @@ class MainActivity : AppCompatActivity() {
 
     private var mFragment: Fragment? = null
     lateinit var drawerLayout: DrawerLayout
-    lateinit var toolbar:Toolbar
-    lateinit var navigationView:NavigationView
+    lateinit var toolbar: Toolbar
+    lateinit var navigationView: NavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,7 +47,6 @@ class MainActivity : AppCompatActivity() {
         selectFragment(R.id.nav_main)
 
     }
-
 
 
     override fun onBackPressed() {
@@ -83,7 +82,6 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-
     private fun selectFragment(fragmentId: Int) {
         when (fragmentId) {
             R.id.nav_github -> {
@@ -101,34 +99,39 @@ class MainActivity : AppCompatActivity() {
                 ).show(fragmentManager, MessageDialog.TAG)
                 return
             }
-            R.id.nav_main->{
+            R.id.nav_main -> {
                 toolbar.title = getString(R.string.app_name)
                 mFragment = MainFragment.newInstance()
                 supportFragmentManager.beginTransaction().replace(R.id.contentFrame, mFragment).commit()
             }
-            R.id.nav_draw_basal ->{
+            R.id.nav_draw_basal -> {
                 mFragment = TabFragment.newInstance(R.string.draw_basal)
                 toolbar.title = getString(R.string.draw_basal)
                 supportFragmentManager.beginTransaction().replace(R.id.contentFrame, mFragment).commit()
             }
-            R.id.nav_paint_detail ->{
+            R.id.nav_paint_detail -> {
                 toolbar.title = getString(R.string.paint_detail)
                 mFragment = TabFragment.newInstance(R.string.paint_detail)
                 supportFragmentManager.beginTransaction().replace(R.id.contentFrame, mFragment).commit()
             }
-            R.id.nav_draw_text ->{
+            R.id.nav_draw_text -> {
                 toolbar.title = getString(R.string.draw_text)
                 mFragment = TabFragment.newInstance(R.string.draw_text)
                 supportFragmentManager.beginTransaction().replace(R.id.contentFrame, mFragment).commit()
             }
-            R.id.nav_canvas_help ->{
+            R.id.nav_canvas_help -> {
                 toolbar.title = getString(R.string.canvas_help)
                 mFragment = TabFragment.newInstance(R.string.canvas_help)
                 supportFragmentManager.beginTransaction().replace(R.id.contentFrame, mFragment).commit()
             }
-            R.id.nav_canvas_order ->{
+            R.id.nav_canvas_order -> {
                 toolbar.title = getString(R.string.canvas_order)
                 mFragment = TabFragment.newInstance(R.string.canvas_order)
+                supportFragmentManager.beginTransaction().replace(R.id.contentFrame, mFragment).commit()
+            }
+            R.id.nav_view_property_animator_simple ->{
+                toolbar.title = getString(R.string.view_property_animator_simple)
+                mFragment = TabFragment.newInstance(R.string.view_property_animator_simple)
                 supportFragmentManager.beginTransaction().replace(R.id.contentFrame, mFragment).commit()
             }
 

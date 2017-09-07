@@ -12,6 +12,7 @@
     <string name="draw_text">1.3 绘制文字</string>
     <string name="canvas_help">1.4 绘制辅助</string>
     <string name="canvas_order">1.5 绘制顺序</string>
+    <string name="view_property_animator_simple">1.6 属性动画（上手篇）</string>
 
     <!-- About -->
     <string name="github">GitHub page…</string>
@@ -119,6 +120,38 @@ BSD 2-Clause License
     <string name="title_before_on_draw_foreground">onDrawForeground()-前插</string>
     <string name="title_after_draw">draw()-后插</string>
     <string name="title_before_draw">draw()-前插</string>
+
+
+    <string name="title_translation">translationX/Y/Z()</string>
+    <string name="title_rotation">rotation/X/Y()</string>
+    <string name="title_scale_translation">scaleX/Y()</string>
+    <string name="title_alpha">alpha()</string>
+    <string name="title_multi_properties">ViewPropertyAnimator-多属性</string>
+    <string name="title_duration">setDuration()</string>
+    <string name="title_interpolator">setInterpolator()</string>
+    <string name="title_object_animator">ObjectAnimator</string>
+    <string name="duration">Duration</string>
+    <string name="ms_with_value">%dms</string>
+    <string name="interpolator">Interpolator</string>
+    <string name="animate">animate</string>
+
+    <string-array name="interpolators">
+        <item>AccelerateDecelerateInterpolator</item>
+        <item>LinearInterpolator</item>
+        <item>AccelerateInterpolator</item>
+        <item>DecelerateInterpolator</item>
+        <item>AnticipateInterpolator</item>
+        <item>OvershootInterpolator</item>
+        <item>AnticipateOvershootInterpolator</item>
+        <item>BounceInterpolator</item>
+        <item>CycleInterpolator</item>
+        <item>PathInterpolator</item>
+        <item>FastOutLinearInInterpolator</item>
+        <item>FastOutSlowInInterpolator</item>
+        <item>LinearOutSlowInInterpolator</item>
+    </string-array>
+
+
     <string name="hello">Hello HenCoder</string>
     <string name="about_hencoder">HenCoder 是\n针对高级 Android 工程师\n的进阶手册\n旨在突破高手们最基础的技能瓶颈\n结束止步不前的状态，继续快速提升\n内容难度上也许对新手不够友好\n只能说句得罪了\n我个人水平有限\n照顾不到所有人</string>
     <string name="image_size">尺寸：%1$d x %2$d</string>

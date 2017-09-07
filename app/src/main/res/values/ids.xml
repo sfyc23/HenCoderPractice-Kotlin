@@ -3,4 +3,18 @@
     <item name="tab" type="id" />
     <item name="item_iv_header" type="id" />
     <item name="item_tv_title" type="id" />
+
+    <item name="imageView" type="id" />
+    <item name="animateBt" type="id" />
+    <item name="noteTv" type="id" />
+
+    <item name="durationLabelTv" type="id" />
+    <item name="durationSb" type="id" />
+    <item name="durationValueTv" type="id" />
+
+    <item name="interpolatorSpinner" type="id" />
+    <item name="objectAnimatorView" type="id" />
+
+
+
 </resources>

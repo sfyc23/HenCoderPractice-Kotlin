@@ -28,7 +28,10 @@
             android:id="@+id/nav_canvas_order"
             android:icon="@drawable/ic_1_5"
             android:title="@string/canvas_order"/>
-
+        <item
+            android:id="@+id/nav_view_property_animator_simple"
+            android:icon="@drawable/ic_1_6"
+            android:title="@string/view_property_animator_simple"/>
     </group>
 
     <item android:title="About">

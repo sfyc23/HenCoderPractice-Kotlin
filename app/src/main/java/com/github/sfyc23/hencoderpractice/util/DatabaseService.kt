@@ -6,6 +6,7 @@ import com.github.sfyc23.hencoderpractice.view.drawbasal.view.*
 import com.github.sfyc23.hencoderpractice.view.draworder.view.Practice_1_5_01_AfterOnDrawView
 import com.github.sfyc23.hencoderpractice.view.drawtext.view.*
 import com.github.sfyc23.hencoderpractice.view.paintdetail.view.*
+import com.github.sfyc23.hencoderpractice.view.practice_1_6.view.*
 import com.hencoder.hencoderpracticedraw5.practice.*
 
 
@@ -29,6 +30,7 @@ class DatabaseService {
             add(MainPage(R.drawable.ic_1_3, R.string.draw_text, R.id.nav_draw_text))
             add(MainPage(R.drawable.ic_1_4, R.string.canvas_help, R.id.nav_canvas_help))
             add(MainPage(R.drawable.ic_1_5, R.string.canvas_order, R.id.nav_canvas_order))
+            add(MainPage(R.drawable.ic_1_6, R.string.view_property_animator_simple, R.id.nav_view_property_animator_simple))
         }
     }
 
@@ -48,6 +50,9 @@ class DatabaseService {
             }
             R.string.canvas_order -> {
                 return getDataList1_5()
+            }
+            R.string.view_property_animator_simple ->{
+                return getDataList1_6()
             }
         }
         return mutableListOf()
@@ -159,6 +164,21 @@ class DatabaseService {
             add(PageModel(R.string.title_before_on_draw_foreground, Practice_1_5_06_BeforeOnDrawForegroundView.TAG))
             add(PageModel(R.string.title_after_draw, Practice_1_5_07_AfterDrawView.TAG))
             add(PageModel(R.string.title_before_draw, Practice_1_5_08_BeforeDrawView.TAG))
+        }
+        return pageModels
+    }
+
+    fun getDataList1_6(): MutableList<PageModel> {
+        var pageModels = ArrayList<PageModel>()
+        pageModels.apply {
+            add(PageModel(R.string.title_translation, Practice_1_6_01_Translation.TAG))
+            add(PageModel(R.string.title_rotation, Practice_1_6_02_Rotation.TAG))
+            add(PageModel(R.string.title_scale_translation, Practice_1_6_03_Scale.TAG))
+            add(PageModel(R.string.title_alpha, Practice_1_6_04_Alpha.TAG))
+            add(PageModel(R.string.title_multi_properties, Practice_1_6_05_MultiProperties.TAG))
+            add(PageModel(R.string.title_duration, Practice_1_6_06_Duration.TAG))
+            add(PageModel(R.string.title_interpolator, Practice_1_6_07_Interpolator.TAG))
+            add(PageModel(R.string.title_object_animator, Practice_1_6_08_ObjectAnimatorLayout.TAG))
         }
         return pageModels
     }
