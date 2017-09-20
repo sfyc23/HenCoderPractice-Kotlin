@@ -50,8 +50,8 @@ class MainAdapter(val context: Context, val items: ArrayList<MainPage>?) : Recyc
         var image: ImageView
 
         init {
-            title = itemView.findViewById(R.id.item_tv_title)
-            image = itemView.findViewById(R.id.item_iv_header)
+            title = itemView.find<TextView>(R.id.item_tv_title)
+            image = itemView.find<ImageView>(R.id.item_iv_header)
         }
 
     }

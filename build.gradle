@@ -18,7 +18,7 @@ allprojects {
         jcenter()
     }
     ext {
-        supportVersion = "26.+"
+        supportVersion = "25.3.1"
         ankoVersion= "0.10.1"
         supportCoreUi="25.3.1"
     }

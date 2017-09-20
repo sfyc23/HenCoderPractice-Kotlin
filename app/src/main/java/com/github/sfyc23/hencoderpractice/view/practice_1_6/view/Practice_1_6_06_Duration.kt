@@ -35,6 +35,7 @@ class Practice_1_6_06_Duration : LinearLayout {
         durationValueTv = find<TextView>(R.id.durationValueTv)
         durationValueTv.text = context.getString(R.string.ms_with_value, duration)
         durationSb.max = 10
+
         durationSb.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
                 duration = progress * 300L

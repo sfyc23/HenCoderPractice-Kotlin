@@ -1,6 +1,6 @@
 package com.hencoder.hencoderpracticedraw1.kt
 
-import android.content.res.ColorStateList
+import android.annotation.SuppressLint
 import android.graphics.Color
 import android.os.Build
 import android.support.annotation.RequiresApi
@@ -10,6 +10,10 @@ import android.view.View
 import android.view.ViewManager
 import android.widget.ImageView
 import android.widget.LinearLayout
+import com.github.sfyc23.base.ext.dp
+import com.github.sfyc23.base.ext.entries
+import com.github.sfyc23.base.ext.foregroundTintListResource
+import com.github.sfyc23.base.ext.textColorResource
 import com.github.sfyc23.hencoderpractice.R
 import com.github.sfyc23.hencoderpractice.main.PracticeDefaultView
 import com.github.sfyc23.hencoderpractice.view.canvashelp.view.*
@@ -20,10 +24,12 @@ import com.github.sfyc23.hencoderpractice.view.paintdetail.view.*
 import com.github.sfyc23.hencoderpractice.view.paintdetail.view.Practice_1_2_03_SweepGradientView
 import com.github.sfyc23.hencoderpractice.view.paintdetail.view.Practice_1_2_04_BitmapShaderView
 import com.github.sfyc23.hencoderpractice.view.practice_1_6.view.*
+import com.github.sfyc23.hencoderpractice.view.practice_1_7.view.*
 import com.hencoder.hencoderpracticedraw5.practice.*
 import org.jetbrains.anko.*
 import org.jetbrains.anko.custom.ankoView
 
+@SuppressLint("ResourceAsColor")
 @RequiresApi(Build.VERSION_CODES.M)
         /**
          * Author :leilei on 2017/8/13 22:26
@@ -64,7 +70,7 @@ fun ViewManager.practice1View(tag: String, theme: Int = 0): View {
         Practice_1_2_12_PathEffectView.TAG -> return practice_1_2_12_PathEffectView(theme) {}
         Practice_1_2_13_ShadowLayerView.TAG -> return practice_1_2_13_ShadowLayerView(theme) {}
         Practice_1_2_14_MaskFilterView.TAG -> {
-            return  practice_1_2_14_MaskFilterView(theme){}
+            return practice_1_2_14_MaskFilterView(theme) {}
         }
         Practice_1_2_15_FillPathView.TAG -> return practice_1_2_15_FillPathView(theme) {}
         Practice_1_2_16_TextPathView.TAG -> return practice_1_2_16_TextPathView(theme) {}
@@ -163,7 +169,8 @@ fun ViewManager.practice1View(tag: String, theme: Int = 0): View {
                 practice_1_5_05_AfterOnDrawForegroundView(theme) {
                     scaleType = ImageView.ScaleType.CENTER_CROP
                     imageResource = R.drawable.batman
-                    foregroundTintList = ColorStateList.valueOf(R.color.material_color_cyan_600)
+//                    foregroundTintList = ColorStateList.valueOf(R.color.material_color_cyan_600)
+                    foregroundTintListResource = R.color.material_color_cyan_600
                 }.lparams(width = dip(200), height = dip(200)) {
                     gravity = Gravity.CENTER
                 }
@@ -174,7 +181,8 @@ fun ViewManager.practice1View(tag: String, theme: Int = 0): View {
                 practice_1_5_06_BeforeOnDrawForegroundView(theme) {
                     scaleType = ImageView.ScaleType.CENTER_CROP
                     imageResource = R.drawable.batman
-                    foregroundTintList = ColorStateList.valueOf(R.color.material_color_cyan_600)
+//                    foregroundTintList = ColorStateList.valueOf(R.color.material_color_cyan_600)
+                    foregroundTintListResource = R.color.material_color_cyan_600
                 }.lparams(width = dip(200), height = dip(200)) {
                     gravity = Gravity.CENTER
                 }
@@ -185,7 +193,8 @@ fun ViewManager.practice1View(tag: String, theme: Int = 0): View {
                 practice_1_5_07_AfterDrawView(theme) {
                     scaleType = ImageView.ScaleType.CENTER_CROP
                     imageResource = R.drawable.batman
-                    foregroundTintList = ColorStateList.valueOf(R.color.material_color_cyan_600)
+//                    foregroundTintList = ColorStateList.valueOf(R.color.material_color_cyan_600)
+                    foregroundTintListResource = R.color.material_color_cyan_600
                 }.lparams(width = dip(200), height = dip(200)) {
                     gravity = Gravity.CENTER
                 }
@@ -205,11 +214,11 @@ fun ViewManager.practice1View(tag: String, theme: Int = 0): View {
             return relativeLayout {
                 practice_1_6_01_Translation(theme) {
                     lparams(matchParent, matchParent)
-                    imageView{
+                    imageView {
                         id = R.id.imageView
                         imageResource = R.drawable.music
 
-                    }.lparams(){
+                    }.lparams() {
                         marginStart = dip(48)
                         topMargin = dip(36)
                     }
@@ -218,13 +227,13 @@ fun ViewManager.practice1View(tag: String, theme: Int = 0): View {
                         textSizeDimen = R.dimen.text_size
                         text = "OnClick Button Start"
                         textColor = ContextCompat.getColor(context, R.color.colorAccent)
-                    }.lparams(){
+                    }.lparams() {
                         centerInParent()
                     }
-                    button{
+                    button {
                         id = R.id.animateBt
                         text = "animate"
-                    }.lparams(dip(120),dip(64)){
+                    }.lparams(dip(120), dip(64)) {
                         margin = dip(32)
                         alignParentBottom()
                         alignParentEnd()
@@ -237,10 +246,10 @@ fun ViewManager.practice1View(tag: String, theme: Int = 0): View {
             return relativeLayout {
                 practice_1_6_02_Rotation(theme) {
                     lparams(matchParent, matchParent)
-                    imageView{
+                    imageView {
                         id = R.id.imageView
                         imageResource = R.drawable.music
-                    }.lparams(){
+                    }.lparams() {
                         marginStart = dip(48)
                         topMargin = dip(36)
                     }
@@ -249,13 +258,13 @@ fun ViewManager.practice1View(tag: String, theme: Int = 0): View {
                         textSizeDimen = R.dimen.text_size
                         text = "OnClick Button Start"
                         textColor = ContextCompat.getColor(context, R.color.colorAccent)
-                    }.lparams(){
+                    }.lparams() {
                         centerInParent()
                     }
-                    button{
+                    button {
                         id = R.id.animateBt
                         text = "animate"
-                    }.lparams(dip(120),dip(64)){
+                    }.lparams(dip(120), dip(64)) {
                         margin = dip(32)
                         alignParentBottom()
                         alignParentEnd()
@@ -268,10 +277,10 @@ fun ViewManager.practice1View(tag: String, theme: Int = 0): View {
             return relativeLayout {
                 practice_1_6_03_Scale(theme) {
                     lparams(matchParent, matchParent)
-                    imageView{
+                    imageView {
                         id = R.id.imageView
                         imageResource = R.drawable.music
-                    }.lparams(){
+                    }.lparams() {
                         marginStart = dip(48)
                         topMargin = dip(36)
                     }
@@ -280,13 +289,13 @@ fun ViewManager.practice1View(tag: String, theme: Int = 0): View {
                         textSizeDimen = R.dimen.text_size
                         text = "OnClick Button Start"
                         textColor = ContextCompat.getColor(context, R.color.colorAccent)
-                    }.lparams(){
+                    }.lparams() {
                         centerInParent()
                     }
-                    button{
+                    button {
                         id = R.id.animateBt
                         text = "animate"
-                    }.lparams(dip(120),dip(64)){
+                    }.lparams(dip(120), dip(64)) {
                         margin = dip(32)
                         alignParentBottom()
                         alignParentEnd()
@@ -299,10 +308,10 @@ fun ViewManager.practice1View(tag: String, theme: Int = 0): View {
             return relativeLayout {
                 practice_1_6_04_Alpha(theme) {
                     lparams(matchParent, matchParent)
-                    imageView{
+                    imageView {
                         id = R.id.imageView
                         imageResource = R.drawable.music
-                    }.lparams(){
+                    }.lparams() {
                         marginStart = dip(48)
                         topMargin = dip(36)
 
@@ -310,15 +319,15 @@ fun ViewManager.practice1View(tag: String, theme: Int = 0): View {
                     textView {
                         id = R.id.noteTv
                         textSizeDimen = R.dimen.text_size
-                        text = "OnClick Button Start"
+                        text = "FOnClick Button Start"
                         textColor = ContextCompat.getColor(context, R.color.colorAccent)
-                    }.lparams(){
+                    }.lparams() {
                         centerInParent()
                     }
-                    button{
+                    button {
                         id = R.id.animateBt
                         text = "animate"
-                    }.lparams(dip(120),dip(64)){
+                    }.lparams(dip(120), dip(64)) {
                         margin = dip(32)
                         alignParentBottom()
                         alignParentEnd()
@@ -332,24 +341,24 @@ fun ViewManager.practice1View(tag: String, theme: Int = 0): View {
             return relativeLayout {
                 practice_1_6_05_MultiProperties(theme) {
                     lparams(matchParent, matchParent)
-                    imageView{
+                    imageView {
                         id = R.id.imageView
                         imageResource = R.drawable.music
-                    }.lparams(){
+                    }.lparams() {
                         marginStart = dip(48)
                         topMargin = dip(80)
                     }
                     textView {
                         id = R.id.noteTv
                         textSizeDimen = R.dimen.text_size
-                        textColor = ContextCompat.getColor(context, R.color.colorAccent)
-                    }.lparams(){
+                        textColorResource = R.color.colorAccent
+                    }.lparams() {
                         centerInParent()
                     }
-                    button{
+                    button {
                         id = R.id.animateBt
                         text = "animate"
-                    }.lparams(dip(120),dip(64)){
+                    }.lparams(dip(120), dip(64)) {
                         margin = dip(32)
                         alignParentBottom()
                         alignParentEnd()
@@ -360,79 +369,80 @@ fun ViewManager.practice1View(tag: String, theme: Int = 0): View {
         }
         Practice_1_6_06_Duration.TAG -> {
             return linearLayout {
-              practice_1_6_06_Duration {
-                  lparams(matchParent, matchParent)
-                  orientation = LinearLayout.VERTICAL
-                  linearLayout{
-                      orientation = LinearLayout.HORIZONTAL
-                      backgroundResource = R.color.material_text_color_white_text
-                      lparams(matchParent,dip(48))
+                practice_1_6_06_Duration {
+                    lparams(matchParent, matchParent)
+                    orientation = LinearLayout.VERTICAL
+                    linearLayout {
+                        orientation = LinearLayout.HORIZONTAL
+                        backgroundResource = R.color.material_text_color_white_text
+                        lparams(matchParent, dip(48))
 //                      weightSum = 7f
-                      textView{
-                          id = R.id.durationLabelTv
-                          setPadding(dip(16), dip(8), dip(16), dip(8))
-                          text = "duration"
-                          textSizeDimen = R.dimen.text_size_label
+                        textView {
+                            id = R.id.durationLabelTv
+                            setPadding(dip(16), dip(8), dip(16), dip(8))
+                            text = "duration"
+                            textSizeDimen = R.dimen.text_size_label
 //                          lparams(0,wrapContent,1f)
 //                          weightSum = 1f
-                          gravity = Gravity.CENTER
-                      }.lparams(0, matchParent,2f){
-                      }
-                      seekBar {
-                          id = R.id.durationSb
-                      }.lparams(0, matchParent,5f){
-                          topMargin = dip(8)
-                      }
-                      textView{
-                          id = R.id.durationValueTv
-                          setPadding(dip(16), dip(8), dip(16), dip(8))
-                          text = "duration"
-                          textSizeDimen = R.dimen.text_size_label
-                          gravity = Gravity.CENTER
-                      }.lparams(0, matchParent,2f)
-                  }
-                  relativeLayout{
-                      lparams(matchParent, matchParent)
-                      imageView{
-                          id = R.id.imageView
-                          imageResource = R.drawable.music
-                      }.lparams(){
-                          marginStart = dip(48)
-                          topMargin = dip(80)
-                      }
-                      button{
-                          id = R.id.animateBt
-                          text = "animate"
-                      }.lparams(dip(120),dip(64)){
-                          margin = dip(32)
-                          alignParentBottom()
-                          alignParentEnd()
-                      }
-                  }
-              }
+                            gravity = Gravity.CENTER
+                        }.lparams(0, matchParent, 2f) {
+                        }
+                        seekBar {
+                            id = R.id.durationSb
+                        }.lparams(0, matchParent, 5f) {
+                            topMargin = dip(8)
+                        }
+                        textView {
+                            id = R.id.durationValueTv
+                            setPadding(dip(16), dip(8), dip(16), dip(8))
+                            text = "duration"
+                            textSizeDimen = R.dimen.text_size_label
+                            gravity = Gravity.CENTER
+                        }.lparams(0, matchParent, 2f)
+                    }
+                    relativeLayout {
+                        lparams(matchParent, matchParent)
+                        imageView {
+                            id = R.id.imageView
+                            imageResource = R.drawable.music
+                        }.lparams() {
+                            marginStart = dip(48)
+                            topMargin = dip(80)
+                        }
+                        button {
+                            id = R.id.animateBt
+                            text = "animate"
+                        }.lparams(dip(120), dip(64)) {
+                            margin = dip(32)
+                            alignParentBottom()
+                            alignParentEnd()
+                        }
+                    }
+                }
             }
         }
         Practice_1_6_07_Interpolator.TAG -> {
             return linearLayout {
                 practice_1_6_07_Interpolator {
                     orientation = LinearLayout.VERTICAL
-                    themedSpinner(R.style.hello) {
+                    themedSpinner() {
                         id = R.id.interpolatorSpinner
-                        setPadding(dip(16),dip(8),dip(16),dip(8))
+                        entries = R.array.interpolators
+                        setPadding(dip(16), dip(8), dip(16), dip(8))
                     }
                     relativeLayout {
                         lparams(matchParent, matchParent)
-                        imageView{
+                        imageView {
                             id = R.id.imageView
                             imageResource = R.drawable.music
-                        }.lparams(){
+                        }.lparams() {
                             marginStart = dip(48)
                             topMargin = dip(80)
                         }
-                        button{
+                        button {
                             id = R.id.animateBt
                             text = "animate"
-                        }.lparams(dip(120),dip(64)){
+                        }.lparams(dip(120), dip(64)) {
                             margin = dip(32)
                             alignParentBottom()
                             alignParentEnd()
@@ -443,18 +453,17 @@ fun ViewManager.practice1View(tag: String, theme: Int = 0): View {
         }
         Practice_1_6_08_ObjectAnimatorLayout.TAG -> {
             return relativeLayout {
-                practice_1_6_08_ObjectAnimatorLayout{
+                practice_1_6_08_ObjectAnimatorLayout {
                     lparams(matchParent, matchParent)
                     practice_1_6_08_ObjectAnimatorView {
                         id = R.id.objectAnimatorView
-
-                    }.lparams(dip(200),dip(200)){
+                    }.lparams(dip(200), dip(200)) {
                         centerInParent()
                     }
-                    button{
+                    button {
                         id = R.id.animateBt
                         text = "animate"
-                    }.lparams(dip(120),dip(64)){
+                    }.lparams(dip(120), dip(64)) {
                         margin = dip(32)
                         alignParentBottom()
                         alignParentEnd()
@@ -464,6 +473,137 @@ fun ViewManager.practice1View(tag: String, theme: Int = 0): View {
             }
         }
 
+        Practice_1_7_01_ArgbEvaluatorView.TAG -> {
+            return relativeLayout {
+                practice_1_7_01_ArgbEvaluatorView {
+                    lparams(matchParent, matchParent)
+                    simpleCircleView {
+                        id = R.id.objectAnimatorView
+                    }.lparams(dip(200), dip(200)) {
+                        centerInParent()
+                    }
+                    button {
+                        id = R.id.animateBt
+                        text = "animate"
+                    }.lparams(dip(120), dip(64)) {
+                        margin = dip(32)
+                        alignParentBottom()
+                        alignParentEnd()
+                    }
+                }
+
+            }
+        }
+
+        Practice_1_7_02_HsvEvaluatorLayout.TAG -> {
+            return relativeLayout {
+                practice_1_7_02_HsvEvaluatorLayout {
+                    lparams(matchParent, matchParent)
+                    simpleCircleView {
+                        id = R.id.objectAnimatorView
+                    }.lparams(dip(200), dip(200)) {
+                        centerInParent()
+                    }
+                    button {
+                        id = R.id.animateBt
+                        text = "animate"
+                    }.lparams(dip(120), dip(64)) {
+                        margin = dip(32)
+                        alignParentBottom()
+                        alignParentEnd()
+                    }
+                }
+
+            }
+        }
+        Practice_1_7_03_OfObjectLayout.TAG -> {
+            return relativeLayout {
+                practice_1_7_03_OfObjectLayout {
+                    lparams(matchParent, matchParent)
+                    practice_1_7_03_OfObjectView {
+                        id = R.id.objectAnimatorView
+                    }.lparams(matchParent, matchParent) {
+                        topMargin = dp(32)
+                        leftMargin = dp(32)
+                        marginEnd = dp(180)
+                    }
+                    button {
+                        id = R.id.animateBt
+                        text = "animate"
+                    }.lparams(dip(120), dip(64)) {
+                        margin = dip(32)
+                        alignParentBottom()
+                        alignParentEnd()
+                    }
+                }
+
+            }
+        }
+        Practice_1_7_04_PropertyValuesHolderLayout.TAG -> {
+            return relativeLayout {
+                practice_1_7_04_PropertyValuesHolderLayout(theme) {
+                    lparams(matchParent, matchParent)
+                    imageView {
+                        id = R.id.objectAnimatorView
+                        imageResource = R.drawable.music
+                    }.lparams() {
+                       centerInParent()
+                    }
+                    button {
+                        id = R.id.animateBt
+                        text = "animate"
+                    }.lparams(dip(120), dip(64)) {
+                        margin = dip(32)
+                        alignParentBottom()
+                        alignParentEnd()
+                    }
+                }
+
+            }
+        }
+        Practice_1_7_05_AnimatorSetLayout.TAG -> {
+            return relativeLayout {
+                practice_1_7_05_AnimatorSetLayout(theme) {
+                    lparams(matchParent, matchParent)
+                    imageView {
+                        id = R.id.objectAnimatorView
+                        imageResource = R.drawable.music
+                    }.lparams() {
+                        centerInParent()
+                    }
+                    button {
+                        id = R.id.animateBt
+                        text = "animate"
+                    }.lparams(dip(120), dip(64)) {
+                        margin = dip(32)
+                        alignParentBottom()
+                        alignParentEnd()
+                    }
+                }
+
+            }
+        }
+        Practice_1_7_06_KeyframeLayout.TAG -> {
+            return relativeLayout {
+                practice_1_7_06_KeyframeLayout(theme) {
+                    lparams(matchParent, matchParent)
+                    practice_1_7_06_KeyframeView {
+                        id = R.id.objectAnimatorView
+                    }.lparams() {
+                        centerInParent()
+                    }
+                    button {
+                        id = R.id.animateBt
+                        text = "animate"
+                    }.lparams(dip(120), dip(64)) {
+                        margin = dip(32)
+                        alignParentBottom()
+                        alignParentEnd()
+                    }
+                }
+
+            }
+        }
 
 
         else -> return practiceDefaultView(theme) {}
@@ -694,7 +834,6 @@ inline fun ViewManager.practice_1_5_08_BeforeDrawView(theme: Int = 0, init: Prac
 //--------------------------------end 1.5 绘制顺序 end------------------------------------
 
 
-
 //--------------------------------start 1.6 属性动画（上手篇） start------------------------------------
 inline fun ViewManager.practice_1_6_01_Translation(theme: Int = 0, init: Practice_1_6_01_Translation.() -> Unit): Practice_1_6_01_Translation {
     return ankoView({ Practice_1_6_01_Translation(it) }, theme, init)
@@ -719,13 +858,48 @@ inline fun ViewManager.practice_1_6_05_MultiProperties(theme: Int = 0, init: Pra
 inline fun ViewManager.practice_1_6_06_Duration(theme: Int = 0, init: Practice_1_6_06_Duration.() -> Unit): Practice_1_6_06_Duration {
     return ankoView({ Practice_1_6_06_Duration(it) }, theme, init)
 }
+
 inline fun ViewManager.practice_1_6_07_Interpolator(theme: Int = 0, init: Practice_1_6_07_Interpolator.() -> Unit): Practice_1_6_07_Interpolator {
     return ankoView({ Practice_1_6_07_Interpolator(it) }, theme, init)
 }
+
 inline fun ViewManager.practice_1_6_08_ObjectAnimatorView(theme: Int = 0, init: Practice_1_6_08_ObjectAnimatorView.() -> Unit): Practice_1_6_08_ObjectAnimatorView {
     return ankoView({ Practice_1_6_08_ObjectAnimatorView(it) }, theme, init)
 }
+
 inline fun ViewManager.practice_1_6_08_ObjectAnimatorLayout(theme: Int = 0, init: Practice_1_6_08_ObjectAnimatorLayout.() -> Unit): Practice_1_6_08_ObjectAnimatorLayout {
     return ankoView({ Practice_1_6_08_ObjectAnimatorLayout(it) }, theme, init)
 }
 //--------------------------------end 1.6 属性动画（上手篇） end------------------------------------
+
+
+//--------------------------------start 1.7 属性动画（进阶篇） start------------------------------------
+inline fun ViewManager.simpleCircleView(theme: Int = 0, init: SimpleCircleView.() -> Unit): SimpleCircleView {
+    return ankoView({ SimpleCircleView(it) }, theme, init)
+}
+
+inline fun ViewManager.practice_1_7_01_ArgbEvaluatorView(theme: Int = 0, init: Practice_1_7_01_ArgbEvaluatorView.() -> Unit): Practice_1_7_01_ArgbEvaluatorView {
+    return ankoView({ Practice_1_7_01_ArgbEvaluatorView(it) }, theme, init)
+}
+inline fun ViewManager.practice_1_7_02_HsvEvaluatorLayout(theme: Int = 0, init: Practice_1_7_02_HsvEvaluatorLayout.() -> Unit): Practice_1_7_02_HsvEvaluatorLayout {
+    return ankoView({ Practice_1_7_02_HsvEvaluatorLayout(it) }, theme, init)
+}
+inline fun ViewManager.practice_1_7_03_OfObjectView(theme: Int = 0, init: Practice_1_7_03_OfObjectView.() -> Unit): Practice_1_7_03_OfObjectView {
+    return ankoView({ Practice_1_7_03_OfObjectView(it) }, theme, init)
+}
+inline fun ViewManager.practice_1_7_03_OfObjectLayout(theme: Int = 0, init: Practice_1_7_03_OfObjectLayout.() -> Unit): Practice_1_7_03_OfObjectLayout {
+    return ankoView({ Practice_1_7_03_OfObjectLayout(it) }, theme, init)
+}
+inline fun ViewManager.practice_1_7_04_PropertyValuesHolderLayout(theme: Int = 0, init: Practice_1_7_04_PropertyValuesHolderLayout.() -> Unit): Practice_1_7_04_PropertyValuesHolderLayout {
+    return ankoView({ Practice_1_7_04_PropertyValuesHolderLayout(it) }, theme, init)
+}
+inline fun ViewManager.practice_1_7_05_AnimatorSetLayout(theme: Int = 0, init: Practice_1_7_05_AnimatorSetLayout.() -> Unit): Practice_1_7_05_AnimatorSetLayout {
+    return ankoView({ Practice_1_7_05_AnimatorSetLayout(it) }, theme, init)
+}
+inline fun ViewManager.practice_1_7_06_KeyframeView(theme: Int = 0, init: Practice_1_7_06_KeyframeView.() -> Unit): Practice_1_7_06_KeyframeView {
+    return ankoView({ Practice_1_7_06_KeyframeView(it) }, theme, init)
+}
+inline fun ViewManager.practice_1_7_06_KeyframeLayout(theme: Int = 0, init: Practice_1_7_06_KeyframeLayout.() -> Unit): Practice_1_7_06_KeyframeLayout {
+    return ankoView({ Practice_1_7_06_KeyframeLayout(it) }, theme, init)
+}
+//--------------------------------end 1.7 属性动画（进阶篇） end------------------------------------

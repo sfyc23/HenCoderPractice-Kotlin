@@ -8,6 +8,7 @@ import android.widget.RelativeLayout
 import android.widget.TextView
 import com.github.sfyc23.hencoderpractice.R
 import org.jetbrains.anko.find
+import org.jetbrains.anko.sdk25.coroutines.onClick
 
 class Practice_1_6_02_Rotation : RelativeLayout {
 
@@ -33,7 +34,7 @@ class Practice_1_6_02_Rotation : RelativeLayout {
         imageView = find<ImageView>(R.id.imageView)
         noteTv = find<TextView>(R.id.noteTv)
         noteTv.text = "next rotation(180f)"
-        animateBt.setOnClickListener {
+        animateBt.onClick {
             when (state) {
                 0 -> {
                     imageView.animate().rotation(180f)

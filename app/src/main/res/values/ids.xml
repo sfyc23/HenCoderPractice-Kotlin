@@ -15,6 +15,7 @@
     <item name="interpolatorSpinner" type="id" />
     <item name="objectAnimatorView" type="id" />
 
+    <item name="simpleCircle" type="id"></item>
 
 
 </resources>

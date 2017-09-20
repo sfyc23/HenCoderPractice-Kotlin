@@ -8,6 +8,7 @@ import android.widget.RelativeLayout
 import android.widget.TextView
 import com.github.sfyc23.hencoderpractice.R
 import org.jetbrains.anko.find
+import org.jetbrains.anko.sdk25.coroutines.onClick
 
 class Practice_1_6_03_Scale : RelativeLayout {
 
@@ -33,13 +34,12 @@ class Practice_1_6_03_Scale : RelativeLayout {
         imageView = find<ImageView>(R.id.imageView)
         noteTv = find<TextView>(R.id.noteTv)
         noteTv.text = "next scaleX(1.5f)"
-        animateBt.setOnClickListener {
+        animateBt.onClick {
             when (state) {
                 0 -> {
                     imageView.animate().scaleX(1.5f)
                     noteTv.text = "next scaleX(1f)"
                 }
-
                 1 -> {
                     imageView.animate().scaleX(1f)
                     noteTv.text = "next scale(0.5f)"

@@ -32,6 +32,10 @@
             android:id="@+id/nav_view_property_animator_simple"
             android:icon="@drawable/ic_1_6"
             android:title="@string/view_property_animator_simple"/>
+        <item
+            android:id="@+id/nav_view_property_animator_advanced"
+            android:icon="@drawable/ic_1_7"
+            android:title="@string/view_property_animator_advanced"/>
     </group>
 
     <item android:title="About">

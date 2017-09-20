@@ -53,6 +53,10 @@ class MainActivity : AppCompatActivity() {
 
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START)
+        } else if (!toolbar.title.equals(getString(R.string.app_name))) {
+            toolbar.title = getString(R.string.app_name)
+            mFragment = MainFragment.newInstance()
+            supportFragmentManager.beginTransaction().replace(R.id.contentFrame, mFragment).commit()
         } else {
             super.onBackPressed()
         }
@@ -129,9 +133,14 @@ class MainActivity : AppCompatActivity() {
                 mFragment = TabFragment.newInstance(R.string.canvas_order)
                 supportFragmentManager.beginTransaction().replace(R.id.contentFrame, mFragment).commit()
             }
-            R.id.nav_view_property_animator_simple ->{
+            R.id.nav_view_property_animator_simple -> {
                 toolbar.title = getString(R.string.view_property_animator_simple)
                 mFragment = TabFragment.newInstance(R.string.view_property_animator_simple)
+                supportFragmentManager.beginTransaction().replace(R.id.contentFrame, mFragment).commit()
+            }
+            R.id.nav_view_property_animator_advanced -> {
+                toolbar.title = getString(R.string.view_property_animator_advanced)
+                mFragment = TabFragment.newInstance(R.string.view_property_animator_advanced)
                 supportFragmentManager.beginTransaction().replace(R.id.contentFrame, mFragment).commit()
             }
 
