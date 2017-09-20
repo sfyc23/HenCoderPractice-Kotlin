@@ -12,9 +12,9 @@ class Practice_1_3_04_SetTypefaceView : View {
     companion object Factory {
         val TAG = Practice_1_3_04_SetTypefaceView::class.java.simpleName
     }
-    internal var paint = Paint(Paint.ANTI_ALIAS_FLAG)
-    internal var text = "Hello HenCoder"
-    internal var typeface: Typeface
+    var paint = Paint(Paint.ANTI_ALIAS_FLAG)
+    var text = "Hello HenCoder"
+    var typeface: Typeface
 
     constructor(context: Context) : super(context) {}
 

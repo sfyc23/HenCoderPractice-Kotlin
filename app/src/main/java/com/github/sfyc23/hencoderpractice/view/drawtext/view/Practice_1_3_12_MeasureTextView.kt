@@ -11,11 +11,11 @@ class Practice_1_3_12_MeasureTextView : View {
     companion object Factory {
         val TAG = Practice_1_3_12_MeasureTextView::class.java.simpleName
     }
-    internal var paint1 = Paint(Paint.ANTI_ALIAS_FLAG)
-    internal var paint2 = Paint(Paint.ANTI_ALIAS_FLAG)
-    internal var text1 = "三个月内你胖了"
-    internal var text2 = "4.5"
-    internal var text3 = "公斤"
+    var paint1 = Paint(Paint.ANTI_ALIAS_FLAG)
+    var paint2 = Paint(Paint.ANTI_ALIAS_FLAG)
+    var text1 = "三个月内你胖了"
+    var text2 = "4.5"
+    var text3 = "公斤"
 
     constructor(context: Context) : super(context) {}
 

@@ -14,10 +14,10 @@ class Practice_1_4_01_ClipRectView : View {
         val TAG = Practice_1_4_01_ClipRectView::class.java.simpleName
     }
 
-    internal var paint = Paint(Paint.ANTI_ALIAS_FLAG)
-    internal var bitmap: Bitmap
+    var paint = Paint(Paint.ANTI_ALIAS_FLAG)
+    var bitmap: Bitmap
 
-    internal var textPaint = Paint()
+    var textPaint = Paint()
 
 
     constructor(context: Context) : super(context) {}

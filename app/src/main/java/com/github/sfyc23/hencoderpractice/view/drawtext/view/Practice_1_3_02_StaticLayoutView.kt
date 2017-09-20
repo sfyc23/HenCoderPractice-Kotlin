@@ -16,8 +16,8 @@ class Practice_1_3_02_StaticLayoutView : View {
         val TAG = Practice_1_3_02_StaticLayoutView::class.java.simpleName
     }
 
-    internal var textPaint = TextPaint(Paint.ANTI_ALIAS_FLAG)
-    internal var text = "(常规)Hello\nHenCoder"
+    var textPaint = TextPaint(Paint.ANTI_ALIAS_FLAG)
+    var text = "(常规)Hello\nHenCoder"
 
     constructor(context: Context) : super(context) {}
 

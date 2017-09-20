@@ -11,9 +11,9 @@ class Practice_1_4_07_MatrixTranslateView : View {
     companion object Factory {
         val TAG = Practice_1_4_07_MatrixTranslateView::class.java.simpleName
     }
-    internal var paint = Paint(Paint.ANTI_ALIAS_FLAG)
-    internal var bitmap: Bitmap
-    internal var matrix = Matrix()
+    var paint = Paint(Paint.ANTI_ALIAS_FLAG)
+    var bitmap: Bitmap
+    var myMatrix = Matrix()
 
     constructor(context: Context) : super(context) {}
 
@@ -28,16 +28,16 @@ class Practice_1_4_07_MatrixTranslateView : View {
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
         canvas.save()
-        matrix.reset()
-        matrix.postTranslate(width / 4f, height / 2f)
-        canvas.concat(matrix)
+        myMatrix.reset()
+        myMatrix.postTranslate(width / 4f, height / 2f)
+        canvas.concat(myMatrix)
         canvas.drawBitmap(bitmap, -bitmap.width / 2f, -bitmap.height / 2f, paint)
         canvas.restore()
 
         canvas.save()
-        matrix.reset()
-        matrix.postTranslate(width * 3 / 4f, height / 2f)
-        canvas.concat(matrix)
+        myMatrix.reset()
+        myMatrix.postTranslate(width * 3 / 4f, height / 2f)
+        canvas.concat(myMatrix)
 //        canvas.drawBitmap(bitmap, 0f, 0f, paint)
         canvas.drawBitmap(bitmap, -bitmap.width / 2f, -bitmap.height / 2f, paint)
         canvas.restore()

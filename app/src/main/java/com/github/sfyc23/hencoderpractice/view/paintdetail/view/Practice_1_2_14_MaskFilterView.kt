@@ -17,11 +17,11 @@ class Practice_1_2_14_MaskFilterView : View {
     companion object Factory {
         val TAG = Practice_1_2_14_MaskFilterView::class.java.simpleName
     }
-    internal var paint = Paint(Paint.ANTI_ALIAS_FLAG)
-    internal var bitmap: Bitmap
-    internal var textPaint = Paint()
-    internal var bitmapHeight: Int
-    internal var bitmapWidth: Int
+    var paint = Paint(Paint.ANTI_ALIAS_FLAG)
+    var bitmap: Bitmap
+    var textPaint = Paint()
+    var bitmapHeight: Int
+    var bitmapWidth: Int
 
     constructor(context: Context) : super(context) {}
 

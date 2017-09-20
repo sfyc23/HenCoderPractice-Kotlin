@@ -13,8 +13,8 @@ class Practice_1_5_02_BeforeOnDrawView : AppCompatTextView {
         val TAG = Practice_1_5_02_BeforeOnDrawView::class.java.simpleName
     }
 
-    internal var paint = Paint(Paint.ANTI_ALIAS_FLAG)
-    internal var bounds = RectF()
+    var paint = Paint(Paint.ANTI_ALIAS_FLAG)
+    var bounds = RectF()
 
     constructor(context: Context) : super(context) {}
 

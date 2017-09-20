@@ -11,7 +11,7 @@ class Practice_1_3_08_SetTextSkewXView : View {
     companion object Factory {
         val TAG = Practice_1_3_08_SetTextSkewXView::class.java.simpleName
     }
-    internal var paint = Paint(Paint.ANTI_ALIAS_FLAG)
+    var paint = Paint(Paint.ANTI_ALIAS_FLAG)
     constructor(context: Context) : super(context) {}
 
     constructor(context: Context, attrs: AttributeSet?) : super(context, attrs) {}

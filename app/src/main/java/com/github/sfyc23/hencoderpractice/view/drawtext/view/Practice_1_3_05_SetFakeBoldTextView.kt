@@ -11,8 +11,8 @@ class Practice_1_3_05_SetFakeBoldTextView : View {
     companion object Factory {
         val TAG = Practice_1_3_05_SetFakeBoldTextView::class.java.simpleName
     }
-    internal var paint = Paint(Paint.ANTI_ALIAS_FLAG)
-    internal var text = "Hello HenCoder"
+    var paint = Paint(Paint.ANTI_ALIAS_FLAG)
+    var text = "Hello HenCoder"
 
     constructor(context: Context) : super(context) {}
 

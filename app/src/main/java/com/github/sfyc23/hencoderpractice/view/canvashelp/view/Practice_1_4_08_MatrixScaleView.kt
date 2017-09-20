@@ -14,7 +14,7 @@ class Practice_1_4_08_MatrixScaleView : View {
 
     var paint = Paint(Paint.ANTI_ALIAS_FLAG)
     var bitmap: Bitmap
-    internal var matrix = Matrix()
+    var myMatrix = Matrix()
     var textPaint = Paint()
 
     constructor(context: Context) : super(context) {}
@@ -39,29 +39,29 @@ class Practice_1_4_08_MatrixScaleView : View {
 
         //先移动坐标
         canvas.save()
-        matrix.reset()
-        matrix.postTranslate(width / 6f, height * 0.382f)
-        canvas.concat(matrix)
+        myMatrix.reset()
+        myMatrix.postTranslate(width / 6f, height * 0.382f)
+        canvas.concat(myMatrix)
         canvas.drawBitmap(bitmap, -bitmap.width / 2f, -bitmap.height / 2f, paint)
         canvas.drawText("原文件", 0f, bitmap.height / 2 + 100f, textPaint)
         canvas.restore()
 
 
         canvas.save()
-        matrix.reset()
-        matrix.postTranslate(width * 3 / 6f, height * 0.382f)
-        matrix.postScale(0.8f, 0.8f, width * 3 / 6f, height * 0.382f)
-        canvas.concat(matrix)
+        myMatrix.reset()
+        myMatrix.postTranslate(width * 3 / 6f, height * 0.382f)
+        myMatrix.postScale(0.8f, 0.8f, width * 3 / 6f, height * 0.382f)
+        canvas.concat(myMatrix)
         canvas.drawBitmap(bitmap, -bitmap.width / 2f, -bitmap.height / 2f, paint)
         canvas.drawText("放缩 0.8", 0f, bitmap.height / 2f + 100f, textPaint)
         canvas.restore()
 
 
         canvas.save()
-        matrix.reset()
-        matrix.postTranslate(width * 5 / 6f, height * 0.382f)
-        matrix.postScale(1f, 1.2f, width * 5 / 6f, height * 0.382f)
-        canvas.concat(matrix)
+        myMatrix.reset()
+        myMatrix.postTranslate(width * 5 / 6f, height * 0.382f)
+        myMatrix.postScale(1f, 1.2f, width * 5 / 6f, height * 0.382f)
+        canvas.concat(myMatrix)
         canvas.drawBitmap(bitmap, -bitmap.width / 2f, -bitmap.height / 2f, paint)
         canvas.drawText("1f,1.2f", 0f, bitmap.height / 2 + 100f, textPaint)
         canvas.restore()

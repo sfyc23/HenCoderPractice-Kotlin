@@ -11,11 +11,11 @@ class Practice_1_3_14_GetFontMetricsView : View {
     companion object Factory {
         val TAG = Practice_1_3_14_GetFontMetricsView::class.java.simpleName
     }
-    internal var paint1 = Paint(Paint.ANTI_ALIAS_FLAG)
-    internal var paint2 = Paint(Paint.ANTI_ALIAS_FLAG)
-    internal var texts = arrayOf("A", "a", "J", "j", "Â", "â")
-    internal var top = 200f
-    internal var bottom = 400f
+    var paint1 = Paint(Paint.ANTI_ALIAS_FLAG)
+    var paint2 = Paint(Paint.ANTI_ALIAS_FLAG)
+    var texts = arrayOf("A", "a", "J", "j", "Â", "â")
+    var top = 200f
+    var bottom = 400f
 
     constructor(context: Context) : super(context) {}
 

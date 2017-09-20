@@ -12,14 +12,14 @@ class Practice_1_3_13_GetTextBoundsView : View {
     companion object Factory {
         val TAG = Practice_1_3_13_GetTextBoundsView::class.java.simpleName
     }
-    internal var paint1 = Paint(Paint.ANTI_ALIAS_FLAG)
-    internal var paint2 = Paint(Paint.ANTI_ALIAS_FLAG)
-    internal var texts = arrayOf("A", "a", "J", "j", "Â", "â")
-    internal var yOffsets = floatArrayOf(0f, 0f, 0f, 0f, 0f, 0f)
+    var paint1 = Paint(Paint.ANTI_ALIAS_FLAG)
+    var paint2 = Paint(Paint.ANTI_ALIAS_FLAG)
+    var texts = arrayOf("A", "a", "J", "j", "Â", "â")
+    var yOffsets = floatArrayOf(0f, 0f, 0f, 0f, 0f, 0f)
 
 
-    internal var top = 200f
-    internal var bottom = 400f
+    var top = 200f
+    var bottom = 400f
 
     constructor(context: Context) : super(context) {}
 

@@ -12,7 +12,7 @@ class Practice_1_5_06_BeforeOnDrawForegroundView : AppCompatImageView {
     companion object Factory {
         val TAG = Practice_1_5_06_BeforeOnDrawForegroundView::class.java.simpleName
     }
-    internal var paint = Paint(Paint.ANTI_ALIAS_FLAG)
+    var paint = Paint(Paint.ANTI_ALIAS_FLAG)
 
     constructor(context: Context) : super(context) {}
 

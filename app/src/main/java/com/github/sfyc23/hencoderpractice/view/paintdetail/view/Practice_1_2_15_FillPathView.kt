@@ -13,14 +13,14 @@ class Practice_1_2_15_FillPathView : View {
     companion object Factory {
         val TAG = Practice_1_2_15_FillPathView::class.java.simpleName
     }
-    internal var paint = Paint(Paint.ANTI_ALIAS_FLAG)
-    internal var pathPaint = Paint(Paint.ANTI_ALIAS_FLAG)
-    internal var path = Path()
-    internal var path1 = Path()
-    internal var path2 = Path()
-    internal var path3 = Path()
+    var paint = Paint(Paint.ANTI_ALIAS_FLAG)
+    var pathPaint = Paint(Paint.ANTI_ALIAS_FLAG)
+    var path = Path()
+    var path1 = Path()
+    var path2 = Path()
+    var path3 = Path()
 
-    internal var textPaint = Paint()
+    var textPaint = Paint()
 
     constructor(context: Context) : super(context) {}
 

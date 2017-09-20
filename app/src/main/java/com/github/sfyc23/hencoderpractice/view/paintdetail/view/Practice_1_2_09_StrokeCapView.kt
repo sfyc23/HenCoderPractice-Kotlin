@@ -13,8 +13,8 @@ class Practice_1_2_09_StrokeCapView : View {
         val TAG = Practice_1_2_09_StrokeCapView::class.java.simpleName
     }
 
-    internal var paint = Paint(Paint.ANTI_ALIAS_FLAG)
-    internal var textPaint = Paint()
+    var paint = Paint(Paint.ANTI_ALIAS_FLAG)
+    var textPaint = Paint()
 
     constructor(context: Context) : super(context) {}
 

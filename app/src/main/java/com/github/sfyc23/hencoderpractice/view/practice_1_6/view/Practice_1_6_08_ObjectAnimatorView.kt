@@ -13,10 +13,15 @@ import org.jetbrains.anko.sp
 
 class Practice_1_6_08_ObjectAnimatorView : View {
     var radius:Float
-    private var progress :Float = 0f
-        /*set(value) {
-            invalidate()
-        }*/
+    var _progress :Float = 0f
+    var progress
+        get() = _progress
+        set(value) {
+            value?.let {
+                _progress = value
+                invalidate()
+            }
+        }
     var arcRectF = RectF()
 
     var paint = Paint(Paint.ANTI_ALIAS_FLAG)
@@ -48,14 +53,7 @@ class Practice_1_6_08_ObjectAnimatorView : View {
 
     }
 
-    fun getProgress(): Float {
-        return progress
-    }
 
-    fun setProgress(progress: Float) {
-        this.progress = progress
-        invalidate()
-    }
 
 
     public override fun onDraw(canvas: Canvas) {

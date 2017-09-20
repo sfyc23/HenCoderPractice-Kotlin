@@ -13,8 +13,8 @@ class Practice_1_4_03_TranslateView : View {
     companion object Factory {
         val TAG = Practice_1_4_03_TranslateView::class.java.simpleName
     }
-    internal var paint = Paint(Paint.ANTI_ALIAS_FLAG)
-    internal var bitmap: Bitmap
+    var paint = Paint(Paint.ANTI_ALIAS_FLAG)
+    var bitmap: Bitmap
 
     constructor(context: Context) : super(context) {}
 

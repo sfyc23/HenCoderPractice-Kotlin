@@ -10,13 +10,13 @@ class Practice_1_2_08_XfermodeView : View {
     companion object Factory {
         val TAG = Practice_1_2_08_XfermodeView::class.java.simpleName
     }
-    internal var paint = Paint(Paint.ANTI_ALIAS_FLAG)
-    internal var bitmap1: Bitmap
-    internal var bitmap2: Bitmap
+    var paint = Paint(Paint.ANTI_ALIAS_FLAG)
+    var bitmap1: Bitmap
+    var bitmap2: Bitmap
 
-    internal var xfermode1: Xfermode = PorterDuffXfermode(PorterDuff.Mode.SRC)
-    internal var xfermode2: Xfermode = PorterDuffXfermode(PorterDuff.Mode.DST_IN)
-    internal var xfermode3: Xfermode = PorterDuffXfermode(PorterDuff.Mode.DST_OUT)
+    var xfermode1: Xfermode = PorterDuffXfermode(PorterDuff.Mode.SRC)
+    var xfermode2: Xfermode = PorterDuffXfermode(PorterDuff.Mode.DST_IN)
+    var xfermode3: Xfermode = PorterDuffXfermode(PorterDuff.Mode.DST_OUT)
 
     constructor(context: Context) : super(context) {}
 

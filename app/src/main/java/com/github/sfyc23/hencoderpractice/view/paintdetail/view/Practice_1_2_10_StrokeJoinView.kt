@@ -13,9 +13,9 @@ class Practice_1_2_10_StrokeJoinView : View {
     companion object Factory {
         val TAG = Practice_1_2_10_StrokeJoinView::class.java.simpleName
     }
-    internal var paint = Paint(Paint.ANTI_ALIAS_FLAG)
-    internal var path = Path()
-    internal var textPaint = Paint()
+    var paint = Paint(Paint.ANTI_ALIAS_FLAG)
+    var path = Path()
+    var textPaint = Paint()
 
     constructor(context: Context) : super(context) {}
 

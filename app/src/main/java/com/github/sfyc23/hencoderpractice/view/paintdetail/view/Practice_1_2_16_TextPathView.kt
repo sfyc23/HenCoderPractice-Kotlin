@@ -11,10 +11,10 @@ class Practice_1_2_16_TextPathView : View {
     companion object Factory {
         val TAG = Practice_1_2_16_TextPathView::class.java.simpleName
     }
-    internal var paint = Paint(Paint.ANTI_ALIAS_FLAG)
-    internal var pathPaint = Paint(Paint.ANTI_ALIAS_FLAG)
-    internal var textPath = Path()
-    internal var text = "Hello HenCoder"
+    var paint = Paint(Paint.ANTI_ALIAS_FLAG)
+    var pathPaint = Paint(Paint.ANTI_ALIAS_FLAG)
+    var textPath = Path()
+    var text = "Hello HenCoder"
 
     constructor(context: Context) : super(context) {}
 

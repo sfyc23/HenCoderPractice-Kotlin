@@ -12,9 +12,9 @@ class Practice_1_4_04_ScaleView : View {
         val TAG = Practice_1_4_04_ScaleView::class.java.simpleName
     }
 
-    internal var paint = Paint(Paint.ANTI_ALIAS_FLAG)
-    internal var bitmap: Bitmap
-    internal var textPaint = Paint()
+    var paint = Paint(Paint.ANTI_ALIAS_FLAG)
+    var bitmap: Bitmap
+    var textPaint = Paint()
 
     constructor(context: Context) : super(context) {}
 
