@@ -25,6 +25,8 @@ import com.github.sfyc23.hencoderpractice.view.paintdetail.view.Practice_1_2_03_
 import com.github.sfyc23.hencoderpractice.view.paintdetail.view.Practice_1_2_04_BitmapShaderView
 import com.github.sfyc23.hencoderpractice.view.practice_1_6.view.*
 import com.github.sfyc23.hencoderpractice.view.practice_1_7.view.*
+import com.github.sfyc23.hencoderpractice.view.practice_2_1.view.Practice_2_1_01_AdjustablePanel
+import com.github.sfyc23.hencoderpractice.view.practice_2_1.view.Practice_2_1_01_SquareImageView
 import com.hencoder.hencoderpracticedraw5.practice.*
 import org.jetbrains.anko.*
 import org.jetbrains.anko.custom.ankoView
@@ -604,6 +606,74 @@ fun ViewManager.practice1View(tag: String, theme: Int = 0): View {
 
             }
         }
+        Practice_2_1_01_SquareImageView.TAG -> {
+            return relativeLayout {
+                practice_2_1_01_AdjustablePanel {
+                    lparams(matchParent, matchParent)
+                    frameLayout {
+                        id = R.id.parentLayout
+                        practice_2_1_01_SquareImageView {
+                            imageResource = R.drawable.avatar_rengwuxian
+                        }.lparams(matchParent, matchParent)
+                    }.lparams(dp(80), dp(100)) {
+//                        centerInParent()
+                    }
+
+
+                    linearLayout {
+                        orientation = LinearLayout.HORIZONTAL
+                        textView {
+                            text = "外框调节"
+//                            textSize = spToFloat(16)
+                        }.lparams(dp(80), matchParent){
+                            gravity = Gravity.CENTER
+                        }
+                        linearLayout {
+                            lparams(matchParent, matchParent)
+                            orientation = LinearLayout.VERTICAL
+                            linearLayout {
+                                orientation = LinearLayout.HORIZONTAL
+                                seekBar {
+                                    id = R.id.widthBar
+                                }.lparams(dp(0), dp(24)){
+                                    weight = 1f
+                                }
+                                textView {
+                                    text = "宽度"
+//                                    textSize = spToFloat(16)
+                                }.lparams(dp(48), wrapContent)
+                            }.lparams(matchParent, dp(0)){
+                                weight = 1f
+                                gravity = Gravity.CENTER
+                            }
+
+                            linearLayout {
+                                orientation = LinearLayout.HORIZONTAL
+                                seekBar {
+                                    id = R.id.heightBar
+                                }.lparams(dp(0), dp(24)){
+                                    weight = 1f
+                                }
+                                textView {
+                                    text = "高度"
+//                                    textSize = spToFloat(16)
+                                }.lparams(dp(48), wrapContent)
+                            }.lparams(matchParent, dp(0)){
+                                weight = 1f
+                                gravity = Gravity.CENTER
+                            }
+                        }
+
+                    }.lparams(matchParent, dp(80)){
+                        alignParentBottom()
+                        gravity = Gravity.CENTER
+                    }
+
+
+                }
+
+            }
+        }
 
 
         else -> return practiceDefaultView(theme) {}
@@ -903,3 +973,15 @@ inline fun ViewManager.practice_1_7_06_KeyframeLayout(theme: Int = 0, init: Prac
     return ankoView({ Practice_1_7_06_KeyframeLayout(it) }, theme, init)
 }
 //--------------------------------end 1.7 属性动画（进阶篇） end------------------------------------
+
+
+//--------------------------------start 2.1 布局过程的自定义 start------------------------------------
+
+inline fun ViewManager.practice_2_1_01_AdjustablePanel(theme: Int = 0, init: Practice_2_1_01_AdjustablePanel.() -> Unit): Practice_2_1_01_AdjustablePanel {
+    return ankoView({ Practice_2_1_01_AdjustablePanel(it) }, theme, init)
+}
+
+inline fun ViewManager.practice_2_1_01_SquareImageView(theme: Int = 0, init: Practice_2_1_01_SquareImageView.() -> Unit): Practice_2_1_01_SquareImageView {
+    return ankoView({ Practice_2_1_01_SquareImageView(it) }, theme, init)
+}
+//--------------------------------end 2.1 布局过程的自定义 end------------------------------------

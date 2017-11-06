@@ -24,9 +24,9 @@ import org.jetbrains.anko.find
 class MainActivity : AppCompatActivity() {
 
     private var mFragment: Fragment? = null
-    lateinit var drawerLayout: DrawerLayout
-    lateinit var toolbar: Toolbar
-    lateinit var navigationView: NavigationView
+    private lateinit var drawerLayout: DrawerLayout
+    private lateinit var toolbar: Toolbar
+    private lateinit var navigationView: NavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -143,7 +143,11 @@ class MainActivity : AppCompatActivity() {
                 mFragment = TabFragment.newInstance(R.string.view_property_animator_advanced)
                 supportFragmentManager.beginTransaction().replace(R.id.contentFrame, mFragment).commit()
             }
-
+            R.id.nav_custom_layout_process -> {
+                toolbar.title = getString(R.string.custom_layout_process)
+                mFragment = TabFragment.newInstance(R.string.custom_layout_process)
+                supportFragmentManager.beginTransaction().replace(R.id.contentFrame, mFragment).commit()
+            }
 
         }
 

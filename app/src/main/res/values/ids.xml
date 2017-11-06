@@ -17,5 +17,8 @@
 
     <item name="simpleCircle" type="id"></item>
 
+    <item name="parentLayout" type="id"></item>
+    <item name="widthBar" type="id"></item>
+    <item name="heightBar" type="id"></item>
 
 </resources>

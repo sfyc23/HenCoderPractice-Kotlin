@@ -18,13 +18,9 @@ import org.jetbrains.anko.support.v4.UI
 
 class MainFragment : Fragment() {
 
-    private var mParam1: String? = null
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        if (arguments != null) {
-            mParam1 = arguments.getString(ARG_PARAM1)
-        }
+
     }
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
@@ -58,16 +54,10 @@ class MainFragment : Fragment() {
 
     companion object {
 
-        private val ARG_PARAM1 = "param1"
-
-        /**
-         * @param param1 Parameter 1.
-         */
         fun newInstance(): MainFragment {
             val fragment = MainFragment()
-            val args = Bundle()
-//            args.putString(ARG_PARAM1, param1)
-            fragment.arguments = args
+//            val args = Bundle()
+//            fragment.arguments = args
             return fragment
         }
     }

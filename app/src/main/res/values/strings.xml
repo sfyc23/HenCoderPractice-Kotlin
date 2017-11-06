@@ -15,13 +15,15 @@
     <string name="view_property_animator_simple">1.6 属性动画（上手篇）</string>
     <string name="view_property_animator_advanced">1.7 属性动画（进阶篇）</string>
 
+    <string name="custom_layout_process">2.1 布局过程的自定义</string>
+
     <!-- About -->
     <string name="github">GitHub page…</string>
     <string name="about_title">About</string>
     <string name="intent_chooser">Complete action using</string>
     <string name="about_body"><![CDATA[
 <b>HenCoderPractice-Kotlin</b><br>
-已完成 1-7
+已完成 2-1
 
 <br><br><b>Author</b><br>
 <a href="https://github.com/sfyc23">Github Profile</a>
@@ -161,7 +163,9 @@ BSD 2-Clause License
     <string name="title_keyframe">PropertyValuesHolder.ofKeyframe()</string>
     <!--1.7-->
 
-
+    <!--1.8-->
+    <string name="title_square_imageview">SquareImageView</string>
+    <!--1.8-->
 
     <string name="hello">Hello HenCoder</string>
     <string name="about_hencoder">HenCoder 是\n针对高级 Android 工程师\n的进阶手册\n旨在突破高手们最基础的技能瓶颈\n结束止步不前的状态，继续快速提升\n内容难度上也许对新手不够友好\n只能说句得罪了\n我个人水平有限\n照顾不到所有人</string>

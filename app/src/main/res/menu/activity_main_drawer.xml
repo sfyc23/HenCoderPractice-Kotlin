@@ -36,6 +36,10 @@
             android:id="@+id/nav_view_property_animator_advanced"
             android:icon="@drawable/ic_1_7"
             android:title="@string/view_property_animator_advanced"/>
+        <item
+            android:id="@+id/nav_custom_layout_process"
+            android:icon="@drawable/ic_2_1"
+            android:title="@string/custom_layout_process"/>
     </group>
 
     <item android:title="About">

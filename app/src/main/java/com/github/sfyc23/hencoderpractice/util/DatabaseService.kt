@@ -8,6 +8,7 @@ import com.github.sfyc23.hencoderpractice.view.drawtext.view.*
 import com.github.sfyc23.hencoderpractice.view.paintdetail.view.*
 import com.github.sfyc23.hencoderpractice.view.practice_1_6.view.*
 import com.github.sfyc23.hencoderpractice.view.practice_1_7.view.*
+import com.github.sfyc23.hencoderpractice.view.practice_2_1.view.Practice_2_1_01_SquareImageView
 import com.hencoder.hencoderpracticedraw5.practice.*
 
 
@@ -33,6 +34,8 @@ class DatabaseService {
             add(MainPage(R.drawable.ic_1_5, R.string.canvas_order, R.id.nav_canvas_order))
             add(MainPage(R.drawable.ic_1_6, R.string.view_property_animator_simple, R.id.nav_view_property_animator_simple))
             add(MainPage(R.drawable.ic_1_7, R.string.view_property_animator_advanced, R.id.nav_view_property_animator_advanced))
+            add(MainPage(R.drawable.ic_2_1, R.string.custom_layout_process, R.id.nav_custom_layout_process))
+
         }
     }
 
@@ -59,9 +62,12 @@ class DatabaseService {
             R.string.view_property_animator_advanced ->{
                 return getDataList1_7()
             }
-
+            R.string.custom_layout_process ->{
+                return getDataList1_8()
+            }
+            else -> return mutableListOf()
         }
-        return mutableListOf()
+//        return mutableListOf()
     }
 
     fun getDataList1_1(): MutableList<PageModel> {
@@ -198,6 +204,14 @@ class DatabaseService {
             add(PageModel(R.string.title_property_values_holder, Practice_1_7_04_PropertyValuesHolderLayout.TAG))
             add(PageModel(R.string.title_animator_set, Practice_1_7_05_AnimatorSetLayout.TAG))
             add(PageModel(R.string.title_keyframe, Practice_1_7_06_KeyframeLayout.TAG))
+        }
+        return pageModels
+    }
+
+    fun getDataList1_8(): MutableList<PageModel> {
+        var pageModels = ArrayList<PageModel>()
+        pageModels.apply {
+            add(PageModel(R.string.title_square_imageview, Practice_2_1_01_SquareImageView.TAG))
         }
         return pageModels
     }
