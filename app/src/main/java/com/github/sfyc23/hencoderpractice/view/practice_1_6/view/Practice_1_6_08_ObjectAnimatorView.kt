@@ -13,7 +13,7 @@ import org.jetbrains.anko.sp
 
 class Practice_1_6_08_ObjectAnimatorView : View {
     var radius:Float
-    var _progress :Float = 0f
+    private var _progress :Float = 0f
     var progress
         get() = _progress
         set(value) {

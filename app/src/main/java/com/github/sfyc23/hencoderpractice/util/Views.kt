@@ -624,6 +624,7 @@ fun ViewManager.practice1View(tag: String, theme: Int = 0): View {
                         orientation = LinearLayout.HORIZONTAL
                         textView {
                             text = "外框调节"
+                            textSizeDimen = 11
 //                            textSize = spToFloat(16)
                         }.lparams(dp(80), matchParent){
                             gravity = Gravity.CENTER
